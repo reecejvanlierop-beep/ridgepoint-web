@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why RidgePoint | RidgePoint Performance Medicine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { rp: { primary:'#0F3D2E', forest:'#1E5A3A', sage:'#7FA588', warm:'#F6F6F3', stone:'#E6E7E2', charcoal:'#222222' } },
+          fontFamily: { raleway:['Raleway','sans-serif'], inter:['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #F6F6F3; color: #222222; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3,h4 { font-family: 'Raleway', sans-serif; }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+    .dot-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 28px 28px; }
+    .nav-link { font-size: 0.8125rem; color: rgba(34,34,34,0.52); letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-link:hover { color: #0F3D2E; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b"
+       style="background: rgba(246,246,243,0.97); backdrop-filter: blur(8px); border-color: #E6E7E2;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-2.5 flex items-center justify-between">
+      <a href="index.html" class="flex-shrink-0 select-none">
+        <img src="Ridgepoint Logo 6.7.26.jpg" alt="RidgePoint Performance Medicine"
+             style="height:80px; width:auto; display:block; object-fit:contain;" />
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="services.html"       class="nav-link">Services</a>
+        <a href="why-ridgepoint.html" class="nav-link" style="color:#0F3D2E;">Why RidgePoint</a>
+        <a href="for-providers.html"  class="nav-link">For Providers</a>
+        <a href="for-patients.html"   class="nav-link">For Patients</a>
+        <a href="team.html"           class="nav-link">Our Team</a>
+        <a href="index.html#contact" class="bg-rp-primary text-white text-xs font-bold font-raleway tracking-[0.18em] uppercase px-6 py-2.5 hover:bg-rp-forest transition-colors duration-200">Request Appointment</a>
+      </div>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 text-rp-charcoal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex-col border-t" style="background:#F6F6F3; border-color:#E6E7E2;">
+      <a href="services.html"       class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Services</a>
+      <a href="why-ridgepoint.html" class="px-6 py-3.5 text-sm border-b border-rp-stone font-semibold" style="color:#0F3D2E;">Why RidgePoint</a>
+      <a href="for-providers.html"  class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">For Providers</a>
+      <a href="for-patients.html"   class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">For Patients</a>
+      <a href="team.html"           class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Our Team</a>
+      <div class="px-6 py-4"><a href="index.html#contact" class="block bg-rp-primary text-white text-xs font-bold font-raleway tracking-[0.18em] uppercase px-6 py-3 text-center">Request Appointment</a></div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="dot-grid pt-36 pb-20" style="background-color:#0F3D2E;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <p class="font-raleway text-xs tracking-[0.5em] uppercase mb-6" style="color:rgba(255,255,255,0.28);">RidgePoint Performance Medicine</p>
+      <h1 class="font-raleway font-extrabold text-white leading-tight mb-6" style="font-size: clamp(2.2rem, 5vw, 4rem);">
+        Why RidgePoint
+      </h1>
+      <p class="text-lg max-w-2xl leading-relaxed" style="color:rgba(255,255,255,0.5);">
+        Musculoskeletal care has a problem. We built RidgePoint to fix it.
+      </p>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM SECTION -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="max-w-3xl mb-16">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="h-px w-8 bg-rp-primary"></div>
+          <span class="font-raleway text-rp-primary text-xs font-bold tracking-[0.38em] uppercase">The Problem</span>
+        </div>
+        <h2 class="font-raleway text-3xl md:text-4xl font-bold text-rp-charcoal leading-tight mb-6">
+          Traditional MSK Care Often Falls Short
+        </h2>
+        <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+          The majority of musculoskeletal conditions can be resolved without surgery. But too often, patients are rushed through high-volume systems that default to imaging, procedures, and specialist referrals — rather than taking the time to listen, diagnose accurately, and build a real plan.
+        </p>
+      </div>
+
+      <!-- Comparison table -->
+      <div class="border border-rp-stone overflow-hidden">
+        <div class="grid grid-cols-3 border-b border-rp-stone">
+          <div class="px-6 py-4 col-span-1" style="background:#F6F6F3;"></div>
+          <div class="px-6 py-4 border-l border-rp-stone">
+            <span class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase" style="color:rgba(34,34,34,0.35);">Traditional MSK Clinic</span>
+          </div>
+          <div class="px-6 py-4 border-l border-rp-stone bg-rp-primary">
+            <span class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase" style="color:rgba(255,255,255,0.6);">RidgePoint</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 border-b border-rp-stone">
+          <div class="px-6 py-5 font-raleway font-semibold text-sm text-rp-charcoal" style="background:#F6F6F3;">Appointment Time</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone" style="color:rgba(34,34,34,0.6);">8–15 minutes with provider</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone bg-rp-primary" style="color:rgba(255,255,255,0.75);">Time to actually understand your history, goals, and presentation</div>
+        </div>
+        <div class="grid grid-cols-3 border-b border-rp-stone">
+          <div class="px-6 py-5 font-raleway font-semibold text-sm text-rp-charcoal" style="background:#F6F6F3;">Care Model</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone" style="color:rgba(34,34,34,0.6);">Siloed specialists with separate notes and separate plans</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone bg-rp-primary" style="color:rgba(255,255,255,0.75);">Integrated team — MD, rehab, and chiro working from one shared plan</div>
+        </div>
+        <div class="grid grid-cols-3 border-b border-rp-stone">
+          <div class="px-6 py-5 font-raleway font-semibold text-sm text-rp-charcoal" style="background:#F6F6F3;">Default Path</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone" style="color:rgba(34,34,34,0.6);">Imaging → referral → procedure → surgery consideration</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone bg-rp-primary" style="color:rgba(255,255,255,0.75);">Conservative-first — exhaust non-operative options before escalating</div>
+        </div>
+        <div class="grid grid-cols-3 border-b border-rp-stone">
+          <div class="px-6 py-5 font-raleway font-semibold text-sm text-rp-charcoal" style="background:#F6F6F3;">Decision Driver</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone" style="color:rgba(34,34,34,0.6);">Volume, throughput, and revenue metrics</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone bg-rp-primary" style="color:rgba(255,255,255,0.75);">Patient goals, evidence, and clinical judgment</div>
+        </div>
+        <div class="grid grid-cols-3 border-b border-rp-stone">
+          <div class="px-6 py-5 font-raleway font-semibold text-sm text-rp-charcoal" style="background:#F6F6F3;">Communication</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone" style="color:rgba(34,34,34,0.6);">Patients often unsure what's wrong or why they're doing what they're doing</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone bg-rp-primary" style="color:rgba(255,255,255,0.75);">Clear explanation of diagnosis, plan, and expectations at every step</div>
+        </div>
+        <div class="grid grid-cols-3">
+          <div class="px-6 py-5 font-raleway font-semibold text-sm text-rp-charcoal" style="background:#F6F6F3;">Outcome Focus</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone" style="color:rgba(34,34,34,0.6);">Pain scores and visit counts</div>
+          <div class="px-6 py-5 text-sm border-l border-rp-stone bg-rp-primary" style="color:rgba(255,255,255,0.75);">Functional goals — return to activity, sport, work, and life</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATORS -->
+  <section class="py-24" style="background-color:#F6F6F3;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="h-px w-8 bg-rp-primary"></div>
+        <span class="font-raleway text-rp-primary text-xs font-bold tracking-[0.38em] uppercase">What Sets Us Apart</span>
+      </div>
+      <h2 class="font-raleway text-3xl md:text-4xl font-bold text-rp-charcoal leading-tight mb-14">
+        Six Things We Do Differently
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="bg-white border border-rp-stone p-8">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] text-rp-primary uppercase mb-4">01</div>
+          <h3 class="font-raleway font-bold text-rp-charcoal text-lg mb-4">Conservative-First Philosophy</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">
+            The majority of musculoskeletal conditions do not require surgery or invasive procedures. We take that seriously. Procedures are offered when conservative care has been appropriately tried and an intervention is supported by evidence — not because it's the fastest path to a billable code.
+          </p>
+        </div>
+
+        <div class="bg-white border border-rp-stone p-8">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] text-rp-primary uppercase mb-4">02</div>
+          <h3 class="font-raleway font-bold text-rp-charcoal text-lg mb-4">Integrated Team, One Plan</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">
+            Your sports medicine physician, rehab specialist, and chiropractor aren't operating in separate silos with separate plans. They communicate, coordinate, and build from a single clinical picture — so your care is consistent and cohesive from day one.
+          </p>
+        </div>
+
+        <div class="bg-white border border-rp-stone p-8">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] text-rp-primary uppercase mb-4">03</div>
+          <h3 class="font-raleway font-bold text-rp-charcoal text-lg mb-4">Time to Actually Listen</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">
+            Your first appointment is not a 10-minute checkbox visit. We take the time to understand your history, your activity level, your goals, and what you've already tried. That context shapes everything — and it's impossible to get without slowing down.
+          </p>
+        </div>
+
+        <div class="bg-white border border-rp-stone p-8">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] text-rp-primary uppercase mb-4">04</div>
+          <h3 class="font-raleway font-bold text-rp-charcoal text-lg mb-4">Evidence-Based, Not Trend-Driven</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">
+            The wellness industry is full of expensive, unproven treatments marketed as breakthroughs. We follow the research. If a treatment doesn't have meaningful clinical support, we don't offer it — and we'll tell you why clearly rather than selling you something you don't need.
+          </p>
+        </div>
+
+        <div class="bg-white border border-rp-stone p-8">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] text-rp-primary uppercase mb-4">05</div>
+          <h3 class="font-raleway font-bold text-rp-charcoal text-lg mb-4">Your Goals, Not Our Metrics</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">
+            We measure success by whether you can do what you want to do — return to your sport, keep up with your grandkids, work a full day without pain. Not by visit counts or procedure volume. Your outcomes are the scorecard, and we take that responsibility seriously.
+          </p>
+        </div>
+
+        <div class="p-8" style="background-color:#0F3D2E;">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] uppercase mb-4" style="color:rgba(255,255,255,0.3);">06</div>
+          <h3 class="font-raleway font-bold text-white text-lg mb-4">Transparency in Every Decision</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55);">
+            You will always know what we think is wrong, what we recommend and why, what the realistic outcomes are, and what happens if we do nothing. No mystery. No pressure. Just honest clinical thinking — so you can make informed decisions about your own care.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY SECTION -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="h-px w-8 bg-rp-primary"></div>
+            <span class="font-raleway text-rp-primary text-xs font-bold tracking-[0.38em] uppercase">Our Philosophy</span>
+          </div>
+          <h2 class="font-raleway text-3xl md:text-4xl font-bold text-rp-charcoal leading-tight mb-6">
+            Non-Operative Expertise Is a Specialty
+          </h2>
+          <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
+            Surgery saves lives and restores function when it's needed. But in musculoskeletal care, the question of when it's truly needed is often answered too quickly. Many patients are referred to surgery before conservative options have been adequately explored.
+          </p>
+          <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
+            RidgePoint exists specifically to fill that gap. We are specialists in non-operative MSK care — not because we are anti-surgery, but because we believe every patient deserves a thorough, expert attempt at conservative management before that decision is made.
+          </p>
+          <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+            When surgery is appropriate, we will say so clearly and help facilitate the right referral. When it isn't, we'll build the best possible plan to get you where you want to be without it.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="p-8 border border-rp-stone bg-rp-warm">
+            <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-4">Clinical Positioning</div>
+            <p class="font-raleway text-base font-medium text-rp-charcoal leading-relaxed" style="font-style:italic;">
+              "RidgePoint provides evidence-based, non-operative orthopedic and sports medicine care focused on helping patients achieve meaningful outcomes while respecting their goals, time, and resources."
+            </p>
+          </div>
+
+          <div class="p-8" style="background-color:#0F3D2E;">
+            <div class="font-raleway text-[10px] font-bold tracking-[0.4em] uppercase mb-4" style="color:rgba(255,255,255,0.3);">Founding Principle</div>
+            <p class="font-raleway text-xl font-bold text-white leading-snug mb-4">
+              Always do what's right for the patient.
+            </p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5);">
+              Not what's easiest. Not what's most profitable. Not what keeps the schedule moving. What is actually right for each individual patient, every time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 dot-grid" style="background-color:#0F3D2E;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-raleway text-3xl md:text-4xl font-bold text-white leading-tight mb-4">Experience the Difference</h2>
+          <p class="text-base leading-relaxed" style="color:rgba(255,255,255,0.5);">Whether you're a patient or a referring provider, we welcome the conversation.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 lg:justify-end">
+          <a href="index.html#contact" class="inline-flex items-center justify-center bg-white font-raleway font-bold text-xs tracking-[0.22em] uppercase px-9 py-4 hover:bg-rp-warm transition-colors duration-200" style="color:#0F3D2E;">Request an Appointment</a>
+          <a href="for-providers.html" class="inline-flex items-center justify-center gap-2 font-raleway font-medium text-xs tracking-[0.22em] uppercase px-9 py-4 transition-all duration-200"
+             style="border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.52);"
+             onmouseover="this.style.borderColor='rgba(255,255,255,0.4)';this.style.color='rgba(255,255,255,0.8)'"
+             onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.color='rgba(255,255,255,0.52)'">Referring Providers</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color:#222222;" class="py-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex flex-col md:flex-row items-start justify-between gap-10 mb-10">
+        <div>
+          <a href="index.html" class="block mb-5">
+            <img src="Ridgepoint Logo 6.7.26.jpg" alt="RidgePoint Performance Medicine" style="height:48px; width:auto; display:block; object-fit:contain; filter:invert(1) opacity(0.75);" />
+          </a>
+          <div class="text-xs leading-relaxed" style="color:#555;">534 E Spokane Falls Blvd<br/>Spokane, WA 99202</div>
+          <div class="text-xs mt-1" style="color:#555;">info@ridgepointmed.com</div>
+        </div>
+        <div class="flex gap-14">
+          <div>
+            <div class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase mb-4" style="color:#444;">Clinic</div>
+            <div class="flex flex-col gap-2.5">
+              <a href="services.html"       class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Services</a>
+              <a href="why-ridgepoint.html" class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Why RidgePoint</a>
+              <a href="team.html"           class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Our Team</a>
+            </div>
+          </div>
+          <div>
+            <div class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase mb-4" style="color:#444;">Resources</div>
+            <div class="flex flex-col gap-2.5">
+              <a href="for-providers.html" class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">For Providers</a>
+              <a href="for-patients.html"  class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">For Patients</a>
+              <a href="index.html#contact" class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t" style="border-color:#2a2a2a;">
+        <div class="text-xs" style="color:#3a3a3a;">© 2026 RidgePoint Performance Medicine. Spokane, WA.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

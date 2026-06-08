@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Patients | RidgePoint Performance Medicine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { rp: { primary:'#0F3D2E', forest:'#1E5A3A', sage:'#7FA588', warm:'#F6F6F3', stone:'#E6E7E2', charcoal:'#222222' } },
+          fontFamily: { raleway:['Raleway','sans-serif'], inter:['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #F6F6F3; color: #222222; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3,h4 { font-family: 'Raleway', sans-serif; }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+    .dot-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 28px 28px; }
+    .nav-link { font-size: 0.8125rem; color: rgba(34,34,34,0.52); letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-link:hover { color: #0F3D2E; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.2s; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b"
+       style="background: rgba(246,246,243,0.97); backdrop-filter: blur(8px); border-color: #E6E7E2;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-2.5 flex items-center justify-between">
+      <a href="index.html" class="flex-shrink-0 select-none">
+        <img src="Ridgepoint Logo 6.7.26.jpg" alt="RidgePoint Performance Medicine" style="height:80px; width:auto; display:block; object-fit:contain;" />
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="services.html"       class="nav-link">Services</a>
+        <a href="why-ridgepoint.html" class="nav-link">Why RidgePoint</a>
+        <a href="for-providers.html"  class="nav-link">For Providers</a>
+        <a href="for-patients.html"   class="nav-link" style="color:#0F3D2E;">For Patients</a>
+        <a href="team.html"           class="nav-link">Our Team</a>
+        <a href="index.html#contact" class="bg-rp-primary text-white text-xs font-bold font-raleway tracking-[0.18em] uppercase px-6 py-2.5 hover:bg-rp-forest transition-colors duration-200">Request Appointment</a>
+      </div>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 text-rp-charcoal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex-col border-t" style="background:#F6F6F3; border-color:#E6E7E2;">
+      <a href="services.html"       class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Services</a>
+      <a href="why-ridgepoint.html" class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Why RidgePoint</a>
+      <a href="for-providers.html"  class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">For Providers</a>
+      <a href="for-patients.html"   class="px-6 py-3.5 text-sm border-b border-rp-stone font-semibold" style="color:#0F3D2E;">For Patients</a>
+      <a href="team.html"           class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Our Team</a>
+      <div class="px-6 py-4"><a href="index.html#contact" class="block bg-rp-primary text-white text-xs font-bold font-raleway tracking-[0.18em] uppercase px-6 py-3 text-center">Request Appointment</a></div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="dot-grid pt-36 pb-20" style="background-color:#0F3D2E;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <p class="font-raleway text-xs tracking-[0.5em] uppercase mb-6" style="color:rgba(255,255,255,0.28);">RidgePoint Performance Medicine</p>
+      <h1 class="font-raleway font-extrabold text-white leading-tight mb-6" style="font-size: clamp(2.2rem, 5vw, 4rem);">For Patients</h1>
+      <p class="text-lg max-w-2xl leading-relaxed" style="color:rgba(255,255,255,0.5);">
+        You don't need a referral to see us. Here's everything you need to know before your first visit.
+      </p>
+      <div class="flex flex-wrap gap-3 mt-10">
+        <a href="#what-to-expect" class="text-xs px-4 py-2 font-raleway font-semibold tracking-widest uppercase transition-colors duration-200" style="border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.45)'" onmouseout="this.style.color='rgba(255,255,255,0.55)';this.style.borderColor='rgba(255,255,255,0.18)'">What to Expect</a>
+        <a href="#conditions"     class="text-xs px-4 py-2 font-raleway font-semibold tracking-widest uppercase transition-colors duration-200" style="border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.45)'" onmouseout="this.style.color='rgba(255,255,255,0.55)';this.style.borderColor='rgba(255,255,255,0.18)'">Conditions We Treat</a>
+        <a href="#prepare"        class="text-xs px-4 py-2 font-raleway font-semibold tracking-widest uppercase transition-colors duration-200" style="border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.45)'" onmouseout="this.style.color='rgba(255,255,255,0.55)';this.style.borderColor='rgba(255,255,255,0.18)'">How to Prepare</a>
+        <a href="#faq"            class="text-xs px-4 py-2 font-raleway font-semibold tracking-widest uppercase transition-colors duration-200" style="border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.45)'" onmouseout="this.style.color='rgba(255,255,255,0.55)';this.style.borderColor='rgba(255,255,255,0.18)'">FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELF-REFERRAL BANNER -->
+  <section class="py-10 bg-white border-b border-rp-stone">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 bg-rp-primary flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <div class="font-raleway font-bold text-rp-charcoal text-base">No Referral Required</div>
+            <p class="text-sm" style="color:rgba(34,34,34,0.55);">You can schedule directly with us — no physician referral needed. We also happily accept provider referrals.</p>
+          </div>
+        </div>
+        <a href="index.html#contact" class="flex-shrink-0 bg-rp-primary text-white font-raleway font-bold text-xs tracking-[0.18em] uppercase px-7 py-3 hover:bg-rp-forest transition-colors duration-200">Request an Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO EXPECT -->
+  <section id="what-to-expect" class="py-24" style="background-color:#F6F6F3; scroll-margin-top:100px;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="h-px w-8 bg-rp-primary"></div>
+        <span class="font-raleway text-rp-primary text-xs font-bold tracking-[0.38em] uppercase">Your First Visit</span>
+      </div>
+      <h2 class="font-raleway text-3xl md:text-4xl font-bold text-rp-charcoal leading-tight mb-14">What to Expect</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+        <div class="space-y-6">
+          <div class="bg-white border border-rp-stone p-8">
+            <div class="flex items-start gap-5">
+              <div class="font-raleway text-2xl font-extrabold text-rp-stone flex-shrink-0">01</div>
+              <div>
+                <h3 class="font-raleway font-bold text-rp-charcoal text-base mb-3">A Real Conversation</h3>
+                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Your first appointment starts with us listening. We want to understand your pain or problem, how it affects your daily life, what you've already tried, and what you're hoping to get back to. This context shapes everything that comes next.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-rp-stone p-8">
+            <div class="flex items-start gap-5">
+              <div class="font-raleway text-2xl font-extrabold text-rp-stone flex-shrink-0">02</div>
+              <div>
+                <h3 class="font-raleway font-bold text-rp-charcoal text-base mb-3">Thorough Physical Examination</h3>
+                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Our sports medicine physician performs a comprehensive physical exam specific to your complaint. We assess movement, strength, range of motion, and any relevant joint or soft tissue findings — not a five-minute checkout.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-rp-stone p-8">
+            <div class="flex items-start gap-5">
+              <div class="font-raleway text-2xl font-extrabold text-rp-stone flex-shrink-0">03</div>
+              <div>
+                <h3 class="font-raleway font-bold text-rp-charcoal text-base mb-3">A Clear Diagnosis</h3>
+                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">We explain what we think is happening in plain language. If imaging is clinically indicated, we'll order it or review what you've already had. If it isn't needed, we'll explain why — and you won't be sent for unnecessary scans.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-rp-stone p-8">
+            <div class="flex items-start gap-5">
+              <div class="font-raleway text-2xl font-extrabold text-rp-stone flex-shrink-0">04</div>
+              <div>
+                <h3 class="font-raleway font-bold text-rp-charcoal text-base mb-3">Your Personalized Plan</h3>
+                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Before you leave, you'll know exactly what the plan is — whether that's rehab, manual therapy, a follow-up visit, or a combination. You'll know what we expect to happen and what to watch for. No mystery, no guessing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="p-8" style="background-color:#0F3D2E;">
+            <div class="font-raleway text-[10px] font-bold tracking-[0.4em] uppercase mb-4" style="color:rgba(255,255,255,0.3);">Our Promise to You</div>
+            <p class="font-raleway text-xl font-bold text-white leading-snug mb-4">
+              You will leave knowing what's wrong, why it's happening, and what we're going to do about it.
+            </p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5);">
+              Too many patients leave medical appointments more confused than when they arrived. That's not acceptable care. We take the time to explain things clearly — because understanding your condition is part of recovering from it.
+            </p>
+          </div>
+
+          <div class="bg-white border border-rp-stone p-7">
+            <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-4">Integrated Care Team</div>
+            <p class="text-sm leading-relaxed mb-4" style="color:rgba(34,34,34,0.6);">
+              Depending on your needs, your care at RidgePoint may involve our sports medicine physician, rehab specialist, and/or chiropractor — all working from the same plan.
+            </p>
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">
+              You won't have to re-explain your history to each person. The team communicates internally so your care is seamless.
+            </p>
+          </div>
+
+          <div class="bg-rp-warm border border-rp-stone p-7">
+            <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-4">Location &amp; Hours</div>
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div>
+                <span class="text-sm" style="color:rgba(34,34,34,0.65);">534 E Spokane Falls Blvd, Spokane, WA 99202</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div>
+                <span class="text-sm" style="color:rgba(34,34,34,0.65);">Monday – Friday: 8am – 5pm</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div>
+                <span class="text-sm" style="color:rgba(34,34,34,0.65);">info@ridgepointmed.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONDITIONS WE TREAT -->
+  <section id="conditions" class="py-24 bg-white" style="scroll-margin-top:100px;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="h-px w-8 bg-rp-primary"></div>
+        <span class="font-raleway text-rp-primary text-xs font-bold tracking-[0.38em] uppercase">What We Treat</span>
+      </div>
+      <h2 class="font-raleway text-3xl md:text-4xl font-bold text-rp-charcoal leading-tight mb-4">Conditions We See</h2>
+      <p class="text-base leading-relaxed mb-14 max-w-2xl" style="color:rgba(34,34,34,0.55);">
+        If it involves your muscles, joints, tendons, ligaments, or spine — we likely treat it. This is not an exhaustive list. If you're unsure whether we're the right fit, reach out and we'll let you know.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="border border-rp-stone p-7" style="background:#F6F6F3;">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.35em] text-rp-primary uppercase mb-5">Spine</div>
+          <div class="space-y-2.5">
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Low back pain</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Neck pain &amp; stiffness</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Sciatica &amp; radiating pain</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Disc-related pain</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Thoracic pain &amp; stiffness</span></div>
+          </div>
+        </div>
+
+        <div class="border border-rp-stone p-7" style="background:#F6F6F3;">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.35em] text-rp-primary uppercase mb-5">Shoulder &amp; Upper Body</div>
+          <div class="space-y-2.5">
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Rotator cuff pain &amp; tendinopathy</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Shoulder impingement</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Frozen shoulder (adhesive capsulitis)</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Elbow pain (tennis/golfer's elbow)</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Wrist &amp; hand injuries</span></div>
+          </div>
+        </div>
+
+        <div class="border border-rp-stone p-7" style="background:#F6F6F3;">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.35em] text-rp-primary uppercase mb-5">Hip &amp; Lower Body</div>
+          <div class="space-y-2.5">
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Hip pain &amp; dysfunction</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Groin strains &amp; hip flexor pain</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">IT band syndrome</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Hamstring strains</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Hip bursitis</span></div>
+          </div>
+        </div>
+
+        <div class="border border-rp-stone p-7" style="background:#F6F6F3;">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.35em] text-rp-primary uppercase mb-5">Knee</div>
+          <div class="space-y-2.5">
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Knee pain (general)</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Patellofemoral pain syndrome</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Patellar tendinopathy</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Meniscus pain (non-surgical)</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Knee osteoarthritis management</span></div>
+          </div>
+        </div>
+
+        <div class="border border-rp-stone p-7" style="background:#F6F6F3;">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.35em] text-rp-primary uppercase mb-5">Ankle &amp; Foot</div>
+          <div class="space-y-2.5">
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Ankle sprains</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Achilles tendinopathy</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Plantar fasciitis</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Peroneal tendinopathy</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Stress fractures (foot)</span></div>
+          </div>
+        </div>
+
+        <div class="p-7" style="background-color:#0F3D2E;">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase mb-5" style="color:rgba(255,255,255,0.3);">Not Sure?</div>
+          <p class="text-sm leading-relaxed mb-6" style="color:rgba(255,255,255,0.55);">
+            If you're dealing with a musculoskeletal problem and aren't certain we're the right fit, reach out. We'd rather take five minutes to point you in the right direction than have you wait for an appointment that isn't appropriate.
+          </p>
+          <a href="mailto:info@ridgepointmed.com" class="inline-flex items-center gap-2 font-raleway font-bold text-xs tracking-[0.22em] uppercase transition-colors duration-200" style="color:rgba(255,255,255,0.6);" onmouseover="this.style.color='rgba(255,255,255,1)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">
+            Email Us
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO PREPARE -->
+  <section id="prepare" class="py-24 border-y border-rp-stone" style="background-color:#E6E7E2; scroll-margin-top:100px;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="h-px w-8 bg-rp-primary"></div>
+            <span class="font-raleway text-rp-primary text-xs font-bold tracking-[0.38em] uppercase">Before You Come In</span>
+          </div>
+          <h2 class="font-raleway text-3xl md:text-4xl font-bold text-rp-charcoal leading-tight mb-6">How to Prepare</h2>
+          <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+            Coming prepared helps us use your appointment time as efficiently as possible — and ensures we get the full picture right away.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-white border border-rp-stone p-6 flex gap-4">
+            <div class="w-1.5 h-1.5 bg-rp-primary flex-shrink-0 mt-2"></div>
+            <div>
+              <div class="font-raleway font-bold text-rp-charcoal text-sm mb-1">Bring any prior imaging</div>
+              <p class="text-sm" style="color:rgba(34,34,34,0.6);">X-rays, MRI reports, ultrasound results — bring them or have your office send them ahead of time.</p>
+            </div>
+          </div>
+          <div class="bg-white border border-rp-stone p-6 flex gap-4">
+            <div class="w-1.5 h-1.5 bg-rp-primary flex-shrink-0 mt-2"></div>
+            <div>
+              <div class="font-raleway font-bold text-rp-charcoal text-sm mb-1">Know your medication list</div>
+              <p class="text-sm" style="color:rgba(34,34,34,0.6);">Include any supplements, NSAIDs, or injections you've received for this problem.</p>
+            </div>
+          </div>
+          <div class="bg-white border border-rp-stone p-6 flex gap-4">
+            <div class="w-1.5 h-1.5 bg-rp-primary flex-shrink-0 mt-2"></div>
+            <div>
+              <div class="font-raleway font-bold text-rp-charcoal text-sm mb-1">Note what makes it better or worse</div>
+              <p class="text-sm" style="color:rgba(34,34,34,0.6);">Positions, activities, times of day — these patterns tell us a lot about what's happening clinically.</p>
+            </div>
+          </div>
+          <div class="bg-white border border-rp-stone p-6 flex gap-4">
+            <div class="w-1.5 h-1.5 bg-rp-primary flex-shrink-0 mt-2"></div>
+            <div>
+              <div class="font-raleway font-bold text-rp-charcoal text-sm mb-1">Think about your goals</div>
+              <p class="text-sm" style="color:rgba(34,34,34,0.6);">What do you want to get back to? Running a race, returning to work, picking up your grandkids, hiking without pain — knowing this helps us build the right plan.</p>
+            </div>
+          </div>
+          <div class="bg-white border border-rp-stone p-6 flex gap-4">
+            <div class="w-1.5 h-1.5 bg-rp-primary flex-shrink-0 mt-2"></div>
+            <div>
+              <div class="font-raleway font-bold text-rp-charcoal text-sm mb-1">Bring your insurance card &amp; ID</div>
+              <p class="text-sm" style="color:rgba(34,34,34,0.6);">We'll handle the rest at check-in. Insurance and payment options will be discussed before your visit.</p>
+            </div>
+          </div>
+          <div class="bg-white border border-rp-stone p-6 flex gap-4">
+            <div class="w-1.5 h-1.5 bg-rp-primary flex-shrink-0 mt-2"></div>
+            <div>
+              <div class="font-raleway font-bold text-rp-charcoal text-sm mb-1">Wear comfortable clothing</div>
+              <p class="text-sm" style="color:rgba(34,34,34,0.6);">We'll need to examine the affected area — clothing that allows access to the relevant body part makes the exam easier.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-24 bg-white" style="scroll-margin-top:100px;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="h-px w-8 bg-rp-primary"></div>
+        <span class="font-raleway text-rp-primary text-xs font-bold tracking-[0.38em] uppercase">FAQ</span>
+      </div>
+      <h2 class="font-raleway text-3xl md:text-4xl font-bold text-rp-charcoal leading-tight mb-14">Common Questions</h2>
+
+      <div class="max-w-3xl space-y-2">
+
+        <details class="border border-rp-stone group">
+          <summary class="flex items-center justify-between gap-4 px-7 py-5">
+            <span class="font-raleway font-semibold text-rp-charcoal text-base">Do I need a referral from my doctor?</span>
+            <span class="faq-icon w-6 h-6 flex-shrink-0 flex items-center justify-center border border-rp-stone text-rp-primary font-raleway text-lg font-light leading-none">+</span>
+          </summary>
+          <div class="px-7 pb-6 pt-1">
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">No. You can schedule directly with RidgePoint without a physician referral. We welcome self-referred patients. If your doctor referred you, that's great too — we'll communicate directly with their office throughout your care.</p>
+          </div>
+        </details>
+
+        <details class="border border-rp-stone group">
+          <summary class="flex items-center justify-between gap-4 px-7 py-5">
+            <span class="font-raleway font-semibold text-rp-charcoal text-base">What's the difference between RidgePoint and a regular physical therapy clinic?</span>
+            <span class="faq-icon w-6 h-6 flex-shrink-0 flex items-center justify-center border border-rp-stone text-rp-primary font-raleway text-lg font-light leading-none">+</span>
+          </summary>
+          <div class="px-7 pb-6 pt-1">
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">RidgePoint is a comprehensive musculoskeletal clinic, not a standalone PT clinic. We begin with a physician-led sports medicine evaluation, which establishes the diagnosis and guides the plan. From there, care may involve rehabilitation, chiropractic, exercise programming, or procedural care — all from one integrated team. This model catches things that might be missed when starting treatment without a diagnosis.</p>
+          </div>
+        </details>
+
+        <details class="border border-rp-stone group">
+          <summary class="flex items-center justify-between gap-4 px-7 py-5">
+            <span class="font-raleway font-semibold text-rp-charcoal text-base">Will I need surgery?</span>
+            <span class="faq-icon w-6 h-6 flex-shrink-0 flex items-center justify-center border border-rp-stone text-rp-primary font-raleway text-lg font-light leading-none">+</span>
+          </summary>
+          <div class="px-7 pb-6 pt-1">
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">Probably not. The majority of musculoskeletal conditions can be managed effectively without surgery. Our approach is conservative-first — we exhaust non-operative options before considering anything more invasive. If surgery is genuinely the right path for your situation, we will tell you clearly and help facilitate the appropriate referral. We will never push you toward surgery unnecessarily.</p>
+          </div>
+        </details>
+
+        <details class="border border-rp-stone group">
+          <summary class="flex items-center justify-between gap-4 px-7 py-5">
+            <span class="font-raleway font-semibold text-rp-charcoal text-base">How long will my first appointment be?</span>
+            <span class="faq-icon w-6 h-6 flex-shrink-0 flex items-center justify-center border border-rp-stone text-rp-primary font-raleway text-lg font-light leading-none">+</span>
+          </summary>
+          <div class="px-7 pb-6 pt-1">
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">Initial evaluations typically take 45–60 minutes. This is intentional — we take the time needed to understand your history, perform a thorough exam, and build a plan. Follow-up visits are shorter but still substantive.</p>
+          </div>
+        </details>
+
+        <details class="border border-rp-stone group">
+          <summary class="flex items-center justify-between gap-4 px-7 py-5">
+            <span class="font-raleway font-semibold text-rp-charcoal text-base">Do you accept insurance?</span>
+            <span class="faq-icon w-6 h-6 flex-shrink-0 flex items-center justify-center border border-rp-stone text-rp-primary font-raleway text-lg font-light leading-none">+</span>
+          </summary>
+          <div class="px-7 pb-6 pt-1">
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">We are in the process of establishing insurance contracts. Please contact us directly at info@ridgepointmed.com to discuss current insurance participation and payment options before scheduling. We want to make sure there are no surprises.</p>
+          </div>
+        </details>
+
+        <details class="border border-rp-stone group">
+          <summary class="flex items-center justify-between gap-4 px-7 py-5">
+            <span class="font-raleway font-semibold text-rp-charcoal text-base">Will I see the same provider each visit?</span>
+            <span class="faq-icon w-6 h-6 flex-shrink-0 flex items-center justify-center border border-rp-stone text-rp-primary font-raleway text-lg font-light leading-none">+</span>
+          </summary>
+          <div class="px-7 pb-6 pt-1">
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">Depending on your care plan, you may work primarily with one provider or rotate between our sports medicine physician, rehab specialist, and chiropractor. Regardless of who you see, the team communicates and works from a single shared plan — so you never have to re-explain your situation.</p>
+          </div>
+        </details>
+
+        <details class="border border-rp-stone group">
+          <summary class="flex items-center justify-between gap-4 px-7 py-5">
+            <span class="font-raleway font-semibold text-rp-charcoal text-base">I've already tried PT somewhere else. Can you still help?</span>
+            <span class="faq-icon w-6 h-6 flex-shrink-0 flex items-center justify-center border border-rp-stone text-rp-primary font-raleway text-lg font-light leading-none">+</span>
+          </summary>
+          <div class="px-7 pb-6 pt-1">
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">Absolutely. Many of our patients have seen other providers before coming to RidgePoint. We start fresh with a physician evaluation to make sure the diagnosis is correct — sometimes the reason previous treatment didn't work is that the underlying problem wasn't fully identified. We don't dismiss prior care; we build on what's been tried and fill in the gaps.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 dot-grid" style="background-color:#0F3D2E;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-raleway text-3xl md:text-4xl font-bold text-white leading-tight mb-4">Ready to Get Started?</h2>
+          <p class="text-base leading-relaxed" style="color:rgba(255,255,255,0.5);">Request an appointment and our team will reach out to schedule your initial evaluation.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 lg:justify-end">
+          <a href="index.html#contact" class="inline-flex items-center justify-center bg-white font-raleway font-bold text-xs tracking-[0.22em] uppercase px-9 py-4 hover:bg-rp-warm transition-colors duration-200" style="color:#0F3D2E;">Request an Appointment</a>
+          <a href="services.html" class="inline-flex items-center justify-center gap-2 font-raleway font-medium text-xs tracking-[0.22em] uppercase px-9 py-4 transition-all duration-200"
+             style="border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.52);"
+             onmouseover="this.style.borderColor='rgba(255,255,255,0.4)';this.style.color='rgba(255,255,255,0.8)'"
+             onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.color='rgba(255,255,255,0.52)'">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color:#222222;" class="py-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex flex-col md:flex-row items-start justify-between gap-10 mb-10">
+        <div>
+          <a href="index.html" class="block mb-5"><img src="Ridgepoint Logo 6.7.26.jpg" alt="RidgePoint Performance Medicine" style="height:48px; width:auto; display:block; object-fit:contain; filter:invert(1) opacity(0.75);" /></a>
+          <div class="text-xs leading-relaxed" style="color:#555;">534 E Spokane Falls Blvd<br/>Spokane, WA 99202</div>
+          <div class="text-xs mt-1" style="color:#555;">info@ridgepointmed.com</div>
+        </div>
+        <div class="flex gap-14">
+          <div>
+            <div class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase mb-4" style="color:#444;">Clinic</div>
+            <div class="flex flex-col gap-2.5">
+              <a href="services.html"       class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Services</a>
+              <a href="why-ridgepoint.html" class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Why RidgePoint</a>
+              <a href="team.html"           class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Our Team</a>
+            </div>
+          </div>
+          <div>
+            <div class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase mb-4" style="color:#444;">Resources</div>
+            <div class="flex flex-col gap-2.5">
+              <a href="for-providers.html" class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">For Providers</a>
+              <a href="for-patients.html"  class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">For Patients</a>
+              <a href="index.html#contact" class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t" style="border-color:#2a2a2a;">
+        <div class="text-xs" style="color:#3a3a3a;">© 2026 RidgePoint Performance Medicine. Spokane, WA.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

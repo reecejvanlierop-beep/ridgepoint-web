@@ -36,14 +36,10 @@
     h1,h2,h3,h4 { font-family: 'Raleway', sans-serif; }
     #mobile-menu { display: none; }
     #mobile-menu.open { display: flex; }
-
-    /* Dot-grid texture for hero */
     .dot-grid {
       background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
       background-size: 28px 28px;
     }
-
-    /* Thin diagonal line texture — secondary overlay */
     .line-texture {
       background-image: repeating-linear-gradient(
         -55deg,
@@ -53,8 +49,6 @@
         rgba(255,255,255,0.025) 23px
       );
     }
-
-    /* Smooth underline on nav links */
     .nav-link {
       font-size: 0.8125rem;
       color: rgba(34,34,34,0.52);
@@ -71,17 +65,18 @@
        style="background: rgba(246,246,243,0.97); backdrop-filter: blur(8px); border-color: #E6E7E2;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10 py-2.5 flex items-center justify-between">
 
-      <a href="#" class="flex-shrink-0 select-none">
-        <img src="logo.png"
+      <a href="index.html" class="flex-shrink-0 select-none">
+        <img src="Ridgepoint Logo 6.7.26.jpg"
              alt="RidgePoint Performance Medicine"
              style="height:80px; width:auto; display:block; object-fit:contain;" />
       </a>
 
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#about"    class="nav-link">About</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#team"     class="nav-link">Our Team</a>
-        <a href="#contact"  class="nav-link">Contact</a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="services.html"        class="nav-link">Services</a>
+        <a href="why-ridgepoint.html"  class="nav-link">Why RidgePoint</a>
+        <a href="for-providers.html"   class="nav-link">For Providers</a>
+        <a href="for-patients.html"    class="nav-link">For Patients</a>
+        <a href="team.html"            class="nav-link">Our Team</a>
         <a href="#contact"
            class="bg-rp-primary text-white text-xs font-bold font-raleway tracking-[0.18em] uppercase px-6 py-2.5 hover:bg-rp-forest transition-colors duration-200">
           Request Appointment
@@ -97,10 +92,11 @@
     </div>
 
     <div id="mobile-menu" class="md:hidden flex-col gap-0 border-t" style="background:#F6F6F3; border-color:#E6E7E2;">
-      <a href="#about"    class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">About</a>
-      <a href="#services" class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Services</a>
-      <a href="#team"     class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Our Team</a>
-      <a href="#contact"  class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Contact</a>
+      <a href="services.html"       class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Services</a>
+      <a href="why-ridgepoint.html" class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Why RidgePoint</a>
+      <a href="for-providers.html"  class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">For Providers</a>
+      <a href="for-patients.html"   class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">For Patients</a>
+      <a href="team.html"           class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Our Team</a>
       <div class="px-6 py-4">
         <a href="#contact"
            class="block bg-rp-primary text-white text-xs font-bold font-raleway tracking-[0.18em] uppercase px-6 py-3 text-center">
@@ -112,18 +108,15 @@
 
 
   <!-- ── HERO ──────────────────────────────────────────────────── -->
-  <!-- Deep evergreen + subtle dot grid + diagonal line texture + split layout -->
   <section class="min-h-screen flex items-center dot-grid line-texture"
            style="background-color: #0F3D2E; padding-top: 80px;">
 
-    <!-- Radial glow — very subtle warm highlight center-left -->
     <div class="absolute inset-0 pointer-events-none"
          style="background: radial-gradient(ellipse 60% 60% at 30% 50%, rgba(31,90,58,0.55) 0%, transparent 70%);"></div>
 
     <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 w-full relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-16 items-center">
 
-        <!-- Left: headline content -->
         <div>
           <p class="font-raleway text-xs tracking-[0.5em] uppercase mb-10"
              style="color:rgba(255,255,255,0.28);">Spokane, Washington</p>
@@ -146,12 +139,12 @@
                style="color:#0F3D2E;">
               Request an Appointment
             </a>
-            <a href="#about"
+            <a href="why-ridgepoint.html"
                class="inline-flex items-center justify-center gap-2 font-raleway font-medium text-xs tracking-[0.22em] uppercase px-9 py-4 transition-all duration-200"
                style="border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.52);"
                onmouseover="this.style.borderColor='rgba(255,255,255,0.4)';this.style.color='rgba(255,255,255,0.8)'"
                onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.color='rgba(255,255,255,0.52)'">
-              Who We Are
+              Why RidgePoint
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
@@ -159,7 +152,6 @@
           </div>
         </div>
 
-        <!-- Right: commitment card — adds visual interest and breaks up flat green -->
         <div class="hidden lg:block">
           <div class="p-8" style="border:1px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.04);">
 
@@ -197,12 +189,33 @@
 
             <div class="mt-8 pt-7 border-t" style="border-color:rgba(255,255,255,0.1);">
               <p class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase mb-1" style="color:rgba(255,255,255,0.22);">Location</p>
-              <p class="text-sm" style="color:rgba(255,255,255,0.45);">Spokane, Washington</p>
+              <p class="text-sm" style="color:rgba(255,255,255,0.45);">534 E Spokane Falls Blvd<br/>Spokane, WA 99202</p>
             </div>
 
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── QUICK VALUE PROPOSITIONS ──────────────────────────────── -->
+  <section class="py-14 bg-white border-b border-rp-stone">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-rp-stone">
+        <div class="bg-white px-10 py-8">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-3">Integrated Team</div>
+          <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Sports medicine, rehabilitation, and chiropractic care — coordinated under one roof, one plan.</p>
+        </div>
+        <div class="bg-white px-10 py-8">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-3">Conservative First</div>
+          <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">We exhaust every non-operative option before recommending procedures or surgery. Most conditions don't require either.</p>
+        </div>
+        <div class="bg-white px-10 py-8">
+          <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-3">Evidence-Based</div>
+          <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Every recommendation is grounded in current research. No trends, no hype — just what the evidence supports.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -220,10 +233,8 @@
         A Better Model for Musculoskeletal Care
       </h2>
 
-      <!-- Story + cards in 2-col -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
 
-        <!-- Left: founding story (text only — no dangling quote) -->
         <div>
           <p class="text-base leading-relaxed mb-5" style="color:rgba(34,34,34,0.62);">
             RidgePoint Performance Medicine was founded on a simple belief: people deserve healthcare that is honest, effective, and centered on their goals.
@@ -231,14 +242,19 @@
           <p class="text-base leading-relaxed mb-5" style="color:rgba(34,34,34,0.62);">
             After years of practicing within larger healthcare organizations, we recognized that many healthcare systems face increasing pressure around volume, revenue, and efficiency. While these realities are part of modern medicine, we felt something essential was often being lost: meaningful patient relationships, individualized care, and adequate time to understand a patient's goals.
           </p>
-          <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+          <p class="text-base leading-relaxed mb-8" style="color:rgba(34,34,34,0.62);">
             RidgePoint was created to build a better model — one where trust is earned, outcomes matter, evidence guides decision-making, and every recommendation is made with the patient's best interest in mind.
           </p>
+          <a href="why-ridgepoint.html"
+             class="inline-flex items-center gap-2 font-raleway font-bold text-xs tracking-[0.22em] uppercase text-rp-primary hover:text-rp-forest transition-colors duration-200">
+            What Makes Us Different
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
         </div>
 
-        <!-- Right: mission, vision, founding principle -->
         <div class="space-y-4">
-
           <div class="bg-white border border-rp-stone p-7">
             <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-4">Mission</div>
             <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.65);">
@@ -259,11 +275,9 @@
               Always do what's right for the patient.
             </p>
           </div>
-
         </div>
       </div>
 
-      <!-- Full-width clinical positioning quote — sits cleanly below both columns -->
       <div class="border-l-4 border-rp-primary pl-7 py-2 max-w-3xl">
         <p class="font-raleway text-base font-medium text-rp-charcoal leading-relaxed" style="font-style:italic;">
           "RidgePoint provides evidence-based, non-operative orthopedic and sports medicine care focused on helping patients achieve meaningful outcomes while respecting their goals, time, and resources."
@@ -275,7 +289,7 @@
   </section>
 
 
-  <!-- ── SERVICES ──────────────────────────────────────────────── -->
+  <!-- ── SERVICES OVERVIEW ─────────────────────────────────────── -->
   <section id="services" class="py-32 bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
@@ -289,16 +303,25 @@
             Comprehensive MSK Care,<br class="hidden lg:block"/> Under One Roof
           </h2>
         </div>
-        <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.55);">
-          Our collaborative model brings together sports medicine, rehabilitation, manual therapy, and movement expertise — designed to help patients reduce pain, restore function, and remain active through every stage of life.
-        </p>
+        <div>
+          <p class="text-base leading-relaxed mb-5" style="color:rgba(34,34,34,0.55);">
+            Our collaborative model brings together sports medicine, rehabilitation, manual therapy, and movement expertise — designed to help patients reduce pain, restore function, and remain active through every stage of life.
+          </p>
+          <a href="services.html"
+             class="inline-flex items-center gap-2 font-raleway font-bold text-xs tracking-[0.22em] uppercase text-rp-primary hover:text-rp-forest transition-colors duration-200">
+            View All Services
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-        <!-- Sports Medicine -->
-        <div class="group border border-rp-stone p-8 hover:border-rp-primary transition-colors duration-200"
-             style="background:#F6F6F3;">
+        <a href="services.html#sports-medicine"
+           class="group border border-rp-stone p-8 hover:border-rp-primary transition-colors duration-200 block"
+           style="background:#F6F6F3;">
           <div class="w-9 h-9 border border-rp-stone flex items-center justify-center mb-7
                       group-hover:bg-rp-primary group-hover:border-rp-primary transition-all duration-200">
             <svg class="w-4 h-4 text-rp-primary group-hover:text-white transition-colors duration-200"
@@ -309,17 +332,19 @@
           </div>
           <h3 class="font-raleway text-lg font-bold text-rp-charcoal mb-3">Sports Medicine</h3>
           <p class="text-sm leading-relaxed mb-7" style="color:rgba(34,34,34,0.55);">
-            Physician-led evaluation and diagnosis for all MSK conditions. Every patient begins here — establishing the right diagnosis and individualized care plan before any treatment starts.
+            Physician-led evaluation and diagnosis for all MSK conditions. The right diagnosis before any treatment starts.
           </p>
-          <div class="pt-5 border-t border-rp-stone">
-            <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase"
-                  style="color:rgba(34,34,34,0.35);">Sports Medicine MD / DO</span>
+          <div class="pt-5 border-t border-rp-stone flex items-center justify-between">
+            <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase" style="color:rgba(34,34,34,0.35);">Sports Medicine MD / DO</span>
+            <svg class="w-3.5 h-3.5 text-rp-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
           </div>
-        </div>
+        </a>
 
-        <!-- Rehabilitation & Corrective Exercise — replaces Physical Therapy -->
-        <div class="group border border-rp-stone p-8 hover:border-rp-primary transition-colors duration-200"
-             style="background:#F6F6F3;">
+        <a href="services.html#rehabilitation"
+           class="group border border-rp-stone p-8 hover:border-rp-primary transition-colors duration-200 block"
+           style="background:#F6F6F3;">
           <div class="w-9 h-9 border border-rp-stone flex items-center justify-center mb-7
                       group-hover:bg-rp-primary group-hover:border-rp-primary transition-all duration-200">
             <svg class="w-4 h-4 text-rp-primary group-hover:text-white transition-colors duration-200"
@@ -330,17 +355,19 @@
           </div>
           <h3 class="font-raleway text-lg font-bold text-rp-charcoal mb-3">Rehabilitation &amp; Corrective Exercise</h3>
           <p class="text-sm leading-relaxed mb-7" style="color:rgba(34,34,34,0.55);">
-            Structured rehabilitation, corrective exercise, and strength training to restore movement and build lasting resilience. Focused on meaningful, measurable functional improvements.
+            Structured rehab and corrective programming focused on restoring movement and building lasting functional strength.
           </p>
-          <div class="pt-5 border-t border-rp-stone">
-            <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase"
-                  style="color:rgba(34,34,34,0.35);">Rehab Specialist</span>
+          <div class="pt-5 border-t border-rp-stone flex items-center justify-between">
+            <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase" style="color:rgba(34,34,34,0.35);">Rehab Specialist</span>
+            <svg class="w-3.5 h-3.5 text-rp-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
           </div>
-        </div>
+        </a>
 
-        <!-- Chiropractic & Manual Therapy -->
-        <div class="group border border-rp-stone p-8 hover:border-rp-primary transition-colors duration-200"
-             style="background:#F6F6F3;">
+        <a href="services.html#chiropractic"
+           class="group border border-rp-stone p-8 hover:border-rp-primary transition-colors duration-200 block"
+           style="background:#F6F6F3;">
           <div class="w-9 h-9 border border-rp-stone flex items-center justify-center mb-7
                       group-hover:bg-rp-primary group-hover:border-rp-primary transition-all duration-200">
             <svg class="w-4 h-4 text-rp-primary group-hover:text-white transition-colors duration-200"
@@ -351,17 +378,19 @@
           </div>
           <h3 class="font-raleway text-lg font-bold text-rp-charcoal mb-3">Chiropractic &amp; Manual Therapy</h3>
           <p class="text-sm leading-relaxed mb-7" style="color:rgba(34,34,34,0.55);">
-            Hands-on care to restore joint mobility, reduce pain, and improve biomechanics. Spinal and extremity treatment coordinated within your overall care plan.
+            Hands-on care to restore joint mobility, reduce pain, and improve biomechanics — coordinated within your care plan.
           </p>
-          <div class="pt-5 border-t border-rp-stone">
-            <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase"
-                  style="color:rgba(34,34,34,0.35);">Chiropractor / Manual Therapist</span>
+          <div class="pt-5 border-t border-rp-stone flex items-center justify-between">
+            <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase" style="color:rgba(34,34,34,0.35);">Chiropractor / Manual Therapist</span>
+            <svg class="w-3.5 h-3.5 text-rp-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
           </div>
-        </div>
+        </a>
 
-        <!-- Exercise & Performance -->
-        <div class="group border border-rp-stone p-8 hover:border-rp-primary transition-colors duration-200"
-             style="background:#F6F6F3;">
+        <a href="services.html#performance"
+           class="group border border-rp-stone p-8 hover:border-rp-primary transition-colors duration-200 block"
+           style="background:#F6F6F3;">
           <div class="w-9 h-9 border border-rp-stone flex items-center justify-center mb-7
                       group-hover:bg-rp-primary group-hover:border-rp-primary transition-all duration-200">
             <svg class="w-4 h-4 text-rp-primary group-hover:text-white transition-colors duration-200"
@@ -372,17 +401,19 @@
           </div>
           <h3 class="font-raleway text-lg font-bold text-rp-charcoal mb-3">Exercise &amp; Performance</h3>
           <p class="text-sm leading-relaxed mb-7" style="color:rgba(34,34,34,0.55);">
-            Corrective exercise and performance training to build resilience, prevent re-injury, and help you maintain the strength and independence needed to keep doing what matters most.
+            Performance training and injury prevention to build resilience and maintain the strength needed to keep doing what matters.
           </p>
-          <div class="pt-5 border-t border-rp-stone">
-            <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase"
-                  style="color:rgba(34,34,34,0.35);">Exercise Specialist / Rehab Specialist</span>
+          <div class="pt-5 border-t border-rp-stone flex items-center justify-between">
+            <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase" style="color:rgba(34,34,34,0.35);">Exercise / Rehab Specialist</span>
+            <svg class="w-3.5 h-3.5 text-rp-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
           </div>
-        </div>
+        </a>
 
-        <!-- Interventional & Procedural — listed last, no hype -->
-        <div class="group border border-rp-stone p-8 hover:border-rp-primary transition-colors duration-200"
-             style="background:#F6F6F3;">
+        <a href="services.html#interventional"
+           class="group border border-rp-stone p-8 hover:border-rp-primary transition-colors duration-200 block"
+           style="background:#F6F6F3;">
           <div class="w-9 h-9 border border-rp-stone flex items-center justify-center mb-7
                       group-hover:bg-rp-primary group-hover:border-rp-primary transition-all duration-200">
             <svg class="w-4 h-4 text-rp-primary group-hover:text-white transition-colors duration-200"
@@ -393,30 +424,31 @@
           </div>
           <h3 class="font-raleway text-lg font-bold text-rp-charcoal mb-3">Interventional &amp; Procedural Care</h3>
           <p class="text-sm leading-relaxed mb-7" style="color:rgba(34,34,34,0.55);">
-            When conservative care is insufficient, evidence-based procedural options are available — including ultrasound-guided injections and targeted interventions for persistent MSK conditions.
+            When conservative care is insufficient, evidence-based procedural options including ultrasound-guided injections are available.
           </p>
-          <div class="pt-5 border-t border-rp-stone">
-            <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase"
-                  style="color:rgba(34,34,34,0.35);">PM&amp;R / Sports Medicine Physician</span>
+          <div class="pt-5 border-t border-rp-stone flex items-center justify-between">
+            <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase" style="color:rgba(34,34,34,0.35);">PM&amp;R / Sports Medicine Physician</span>
+            <svg class="w-3.5 h-3.5 text-rp-primary opacity-0 group-hover:opacity-100 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
           </div>
-        </div>
+        </a>
 
-        <!-- Referral CTA tile -->
         <div class="p-8 flex flex-col justify-between" style="background-color:#0F3D2E;">
           <div>
             <div class="font-raleway text-[10px] font-bold tracking-[0.4em] uppercase mb-5"
-                 style="color:rgba(255,255,255,0.28);">Patient Access</div>
+                 style="color:rgba(255,255,255,0.28);">For Providers</div>
             <h3 class="font-raleway text-xl font-bold text-white mb-3 leading-snug">
-              Self-Referred or Provider-Referred
+              Send Us Your MSK Patients
             </h3>
             <p class="text-sm leading-relaxed mb-8" style="color:rgba(255,255,255,0.42);">
-              We accept referrals from primary care, orthopedics, internal medicine, and community providers. Self-referrals are always welcome.
+              We accept referrals from primary care, orthopedics, internal medicine, and community providers. We communicate throughout care.
             </p>
           </div>
-          <a href="#contact"
+          <a href="for-providers.html"
              class="inline-flex items-center justify-center bg-white font-raleway font-bold text-xs tracking-[0.22em] uppercase px-6 py-3.5 hover:bg-rp-warm transition-colors duration-200"
              style="color:#0F3D2E;">
-            Request an Appointment
+            Referral Information
           </a>
         </div>
 
@@ -438,9 +470,16 @@
           <h2 class="font-raleway text-4xl md:text-[2.75rem] font-bold text-rp-charcoal leading-tight mb-6">
             For Anyone Who Wants to Stay Active
           </h2>
-          <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.6);">
+          <p class="text-base leading-relaxed mb-8" style="color:rgba(34,34,34,0.6);">
             While performance medicine is part of RidgePoint, our focus is broader. We serve patients of all backgrounds and activity levels. If musculoskeletal health matters to you, we are here — and we will do what is right for you.
           </p>
+          <a href="for-patients.html"
+             class="inline-flex items-center gap-2 font-raleway font-bold text-xs tracking-[0.22em] uppercase text-rp-primary hover:text-rp-forest transition-colors duration-200">
+            What to Expect as a Patient
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
         </div>
 
         <div class="grid grid-cols-2 gap-3">
@@ -492,59 +531,37 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5"
            style="border:1px solid rgba(255,255,255,0.08);">
-
         <div class="p-8 hover:bg-rp-forest transition-colors duration-200"
              style="border-right:1px solid rgba(255,255,255,0.08);">
-          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] mb-6"
-               style="color:rgba(255,255,255,0.25);">01</div>
+          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] mb-6" style="color:rgba(255,255,255,0.25);">01</div>
           <h3 class="font-raleway font-bold text-white text-sm tracking-wide uppercase mb-3">Do What's Right</h3>
-          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.42);">
-            We place patient interests above convenience, routine, or financial incentives.
-          </p>
+          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.42);">We place patient interests above convenience, routine, or financial incentives.</p>
         </div>
-
         <div class="p-8 hover:bg-rp-forest transition-colors duration-200"
              style="border-right:1px solid rgba(255,255,255,0.08);">
-          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] mb-6"
-               style="color:rgba(255,255,255,0.25);">02</div>
+          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] mb-6" style="color:rgba(255,255,255,0.25);">02</div>
           <h3 class="font-raleway font-bold text-white text-sm tracking-wide uppercase mb-3">Earn Trust</h3>
-          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.42);">
-            Trust is earned through honesty, transparency, consistency, and exceptional care.
-          </p>
+          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.42);">Trust is earned through honesty, transparency, consistency, and exceptional care.</p>
         </div>
-
         <div class="p-8 hover:bg-rp-forest transition-colors duration-200"
              style="border-right:1px solid rgba(255,255,255,0.08);">
-          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] mb-6"
-               style="color:rgba(255,255,255,0.25);">03</div>
+          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] mb-6" style="color:rgba(255,255,255,0.25);">03</div>
           <h3 class="font-raleway font-bold text-white text-sm tracking-wide uppercase mb-3">Pursue Better</h3>
-          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.42);">
-            We are committed to continuous learning, innovation, and improvement in everything we do.
-          </p>
+          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.42);">Committed to continuous learning, innovation, and improvement in everything we do.</p>
         </div>
-
         <div class="p-8 hover:bg-rp-forest transition-colors duration-200"
              style="border-right:1px solid rgba(255,255,255,0.08);">
-          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] mb-6"
-               style="color:rgba(255,255,255,0.25);">04</div>
+          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] mb-6" style="color:rgba(255,255,255,0.25);">04</div>
           <h3 class="font-raleway font-bold text-white text-sm tracking-wide uppercase mb-3">Make It Meaningful</h3>
-          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.42);">
-            Every recommendation, treatment, and interaction should create meaningful value for our patients.
-          </p>
+          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.42);">Every recommendation and interaction should create meaningful value for our patients.</p>
         </div>
-
         <div class="p-8 hover:bg-rp-forest transition-colors duration-200">
-          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] mb-6"
-               style="color:rgba(255,255,255,0.25);">05</div>
+          <div class="font-raleway text-[10px] font-bold tracking-[0.45em] mb-6" style="color:rgba(255,255,255,0.25);">05</div>
           <h3 class="font-raleway font-bold text-white text-sm tracking-wide uppercase mb-3">Keep Life in Motion</h3>
-          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.42);">
-            We help people maintain the strength, mobility, and independence needed to continue doing the things that matter most.
-          </p>
+          <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.42);">We help people maintain the strength and independence to keep doing what matters most.</p>
         </div>
-
       </div>
 
-      <!-- The Promise -->
       <div class="mt-10 pt-10" style="border-top:1px solid rgba(255,255,255,0.1);">
         <div class="max-w-3xl">
           <div class="font-raleway text-[10px] font-bold tracking-[0.4em] uppercase mb-5"
@@ -559,7 +576,7 @@
   </section>
 
 
-  <!-- ── TEAM ──────────────────────────────────────────────────── -->
+  <!-- ── TEAM PREVIEW ───────────────────────────────────────────── -->
   <section id="team" class="py-32 bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
@@ -573,27 +590,31 @@
             Meet Our Providers
           </h2>
         </div>
-        <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.55);">
-          Specialists in sports medicine, rehabilitation, chiropractic care, and movement — collaborating on every patient's behalf.
-        </p>
+        <div>
+          <p class="text-base leading-relaxed mb-5" style="color:rgba(34,34,34,0.55);">
+            Specialists in sports medicine, rehabilitation, and chiropractic care — collaborating on every patient's behalf.
+          </p>
+          <a href="team.html"
+             class="inline-flex items-center gap-2 font-raleway font-bold text-xs tracking-[0.22em] uppercase text-rp-primary hover:text-rp-forest transition-colors duration-200">
+            Full Team Profiles
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-        <!-- Dr. Anderson — placeholder until bio/photo are provided -->
         <div class="border border-rp-stone hover:border-rp-primary transition-colors duration-200 overflow-hidden">
-          <div class="h-64 flex items-center justify-center" style="background-color:#0F3D2E;">
-            <div class="rounded-full border flex items-center justify-center"
-                 style="border-color:rgba(255,255,255,0.15); width:72px; height:72px;">
-              <svg class="w-8 h-8" style="color:rgba(255,255,255,0.35);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-              </svg>
-            </div>
+          <div class="h-64 overflow-hidden">
+            <img src="Eric Anderson Headshot.JPEG"
+                 alt="Dr. Eric Anderson, MD"
+                 style="width:100%; height:100%; object-fit:cover; object-position:top;" />
           </div>
           <div class="bg-white p-7">
             <div class="font-raleway text-[10px] font-bold tracking-[0.3em] text-rp-primary uppercase mb-2">Sports Medicine</div>
-            <h3 class="font-raleway font-bold text-rp-charcoal text-xl mb-1">Dr. Anderson, MD</h3>
+            <h3 class="font-raleway font-bold text-rp-charcoal text-xl mb-1">Dr. Eric Anderson, MD</h3>
             <div class="text-xs mb-4" style="color:rgba(34,34,34,0.38);">Sports Medicine Physician</div>
             <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.55);">
               Physician-led evaluation and diagnostic oversight for all RidgePoint patients. Specializes in non-operative orthopedic and sports medicine care.
@@ -601,7 +622,6 @@
           </div>
         </div>
 
-        <!-- Reece Van Lierop -->
         <div class="border border-rp-stone hover:border-rp-primary transition-colors duration-200 overflow-hidden">
           <img src="https://images.squarespace-cdn.com/content/v1/648c8c6debbd5d5263ea32a7/5764b129-f7b2-4001-a3a6-2b3ab2278a60/unnamed.jpg"
                alt="Reece Van Lierop — Rehab Specialist"
@@ -611,12 +631,11 @@
             <h3 class="font-raleway font-bold text-rp-charcoal text-xl mb-1">Reece Van Lierop</h3>
             <div class="text-xs mb-4" style="color:rgba(34,34,34,0.38);">Rehab Specialist</div>
             <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.55);">
-              A Spokane native, Reece earned his degree in Applied Kinesiology from Corban University. He is dedicated to listening closely to each patient's experience and supporting them throughout their healing journey — helping bridge the gap between treatment and long-term functional performance.
+              Spokane native with a degree in Applied Kinesiology from Corban University. Dedicated to bridging the gap between treatment and long-term functional performance.
             </p>
           </div>
         </div>
 
-        <!-- Dr. Robert Friendt, DC -->
         <div class="border border-rp-stone hover:border-rp-primary transition-colors duration-200 overflow-hidden">
           <img src="https://images.squarespace-cdn.com/content/v1/648c8c6debbd5d5263ea32a7/38d3a201-5e9d-429d-b4b3-add59442d270/IMG_8035.jpg"
                alt="Dr. Robert Friendt, DC — Chiropractor"
@@ -626,18 +645,12 @@
             <h3 class="font-raleway font-bold text-rp-charcoal text-xl mb-1">Dr. Robert Friendt, DC</h3>
             <div class="text-xs mb-4" style="color:rgba(34,34,34,0.38);">Chiropractor</div>
             <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.55);">
-              A former Division I pole vaulter and decathlete at the University of Minnesota, Dr. Friendt earned his Doctorate from Texas Chiropractic College. He brings over 10 years of experience from the Houston Medical Center, working alongside UT Orthopedics and university athletics programs before bringing his expertise to Spokane.
+              Former Division I decathlete and Doctorate from Texas Chiropractic College. Over 10 years of experience in the Houston Medical Center alongside UT Orthopedics.
             </p>
           </div>
         </div>
 
       </div>
-
-      <p class="mt-8 text-sm" style="color:rgba(34,34,34,0.35);">
-        Full provider profiles coming soon.
-        <a href="#contact" class="text-rp-primary underline underline-offset-2">Contact us</a>
-        to learn more about our team.
-      </p>
     </div>
   </section>
 
@@ -695,6 +708,7 @@
                 <option>Rehabilitation</option>
                 <option>Performance &amp; Conditioning</option>
                 <option>General MSK Consultation</option>
+                <option>Provider Referral</option>
                 <option>Other</option>
               </select>
             </div>
@@ -740,8 +754,8 @@
                 </div>
                 <div>
                   <div class="font-raleway font-semibold text-rp-charcoal text-sm">Location</div>
-                  <div class="text-sm mt-0.5" style="color:rgba(34,34,34,0.55);">Spokane, Washington</div>
-                  <div class="text-xs mt-0.5" style="color:rgba(34,34,34,0.32);">Address coming soon</div>
+                  <div class="text-sm mt-0.5" style="color:rgba(34,34,34,0.55);">534 E Spokane Falls Blvd</div>
+                  <div class="text-sm" style="color:rgba(34,34,34,0.55);">Spokane, WA 99202</div>
                 </div>
               </div>
 
@@ -790,18 +804,24 @@
           <div class="p-8" style="background-color:#0F3D2E;">
             <h3 class="font-raleway font-bold text-white text-base mb-3">Accepting Referrals</h3>
             <p class="text-sm leading-relaxed mb-5" style="color:rgba(255,255,255,0.42);">
-              All referred patients enter through an initial Sports Medicine evaluation. We communicate directly with your referring provider throughout the care process.
+              All referred patients receive a comprehensive Sports Medicine evaluation. We communicate directly with your office throughout the care process.
             </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs px-3 py-1.5"
-                    style="color:rgba(255,255,255,0.38); border:1px solid rgba(255,255,255,0.12);">Primary Care</span>
-              <span class="text-xs px-3 py-1.5"
-                    style="color:rgba(255,255,255,0.38); border:1px solid rgba(255,255,255,0.12);">Internal Medicine</span>
-              <span class="text-xs px-3 py-1.5"
-                    style="color:rgba(255,255,255,0.38); border:1px solid rgba(255,255,255,0.12);">Orthopedics</span>
-              <span class="text-xs px-3 py-1.5"
-                    style="color:rgba(255,255,255,0.38); border:1px solid rgba(255,255,255,0.12);">Community Providers</span>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs px-3 py-1.5" style="color:rgba(255,255,255,0.38); border:1px solid rgba(255,255,255,0.12);">Primary Care</span>
+              <span class="text-xs px-3 py-1.5" style="color:rgba(255,255,255,0.38); border:1px solid rgba(255,255,255,0.12);">Internal Medicine</span>
+              <span class="text-xs px-3 py-1.5" style="color:rgba(255,255,255,0.38); border:1px solid rgba(255,255,255,0.12);">Orthopedics</span>
+              <span class="text-xs px-3 py-1.5" style="color:rgba(255,255,255,0.38); border:1px solid rgba(255,255,255,0.12);">Community Providers</span>
             </div>
+            <a href="for-providers.html"
+               class="inline-flex items-center gap-2 font-raleway font-bold text-xs tracking-[0.22em] uppercase transition-colors duration-200"
+               style="color:rgba(255,255,255,0.6);"
+               onmouseover="this.style.color='rgba(255,255,255,1)'"
+               onmouseout="this.style.color='rgba(255,255,255,0.6)'">
+              Referral Information
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
           </div>
 
         </div>
@@ -813,33 +833,42 @@
   <!-- ── FOOTER ─────────────────────────────────────────────────── -->
   <footer style="background-color:#222222;" class="py-14">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="flex flex-col md:flex-row items-start justify-between gap-10 mb-10">
 
-        <a href="#" class="flex-shrink-0">
-          <img src="logo.png"
-               alt="RidgePoint Performance Medicine"
-               style="height:48px; width:auto; display:block; object-fit:contain; filter:invert(1) opacity(0.75);" />
-        </a>
-
-        <div class="flex gap-8">
-          <a href="#about"    class="text-xs tracking-wide transition-colors duration-200"
-             style="color:#555;"
-             onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">About</a>
-          <a href="#services" class="text-xs tracking-wide transition-colors duration-200"
-             style="color:#555;"
-             onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Services</a>
-          <a href="#team"     class="text-xs tracking-wide transition-colors duration-200"
-             style="color:#555;"
-             onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Team</a>
-          <a href="#contact"  class="text-xs tracking-wide transition-colors duration-200"
-             style="color:#555;"
-             onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Contact</a>
+        <div>
+          <a href="index.html" class="block mb-5">
+            <img src="Ridgepoint Logo 6.7.26.jpg"
+                 alt="RidgePoint Performance Medicine"
+                 style="height:48px; width:auto; display:block; object-fit:contain; filter:invert(1) opacity(0.75);" />
+          </a>
+          <div class="text-xs leading-relaxed" style="color:#555;">
+            534 E Spokane Falls Blvd<br/>Spokane, WA 99202
+          </div>
+          <div class="text-xs mt-1" style="color:#555;">info@ridgepointmed.com</div>
         </div>
 
-        <div class="text-xs" style="color:#3a3a3a;">
-          © 2026 RidgePoint Performance Medicine. Spokane, WA.
+        <div class="flex gap-14">
+          <div>
+            <div class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase mb-4" style="color:#444;">Clinic</div>
+            <div class="flex flex-col gap-2.5">
+              <a href="services.html"       class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Services</a>
+              <a href="why-ridgepoint.html" class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Why RidgePoint</a>
+              <a href="team.html"           class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Our Team</a>
+            </div>
+          </div>
+          <div>
+            <div class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase mb-4" style="color:#444;">Resources</div>
+            <div class="flex flex-col gap-2.5">
+              <a href="for-providers.html" class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">For Providers</a>
+              <a href="for-patients.html"  class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">For Patients</a>
+              <a href="#contact"           class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Contact</a>
+            </div>
+          </div>
         </div>
 
+      </div>
+      <div class="pt-8 border-t" style="border-color:#2a2a2a;">
+        <div class="text-xs" style="color:#3a3a3a;">© 2026 RidgePoint Performance Medicine. Spokane, WA.</div>
       </div>
     </div>
   </footer>
