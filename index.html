@@ -58,6 +58,20 @@
       transition: color 0.2s;
     }
     .nav-link:hover { color: #3B4A2F; }
+
+    /* ── Progressive-disclosure "reveal" (native details, no JS) ── */
+    .reveal > summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:0.55rem; font-family:'Raleway',sans-serif; font-weight:700; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#3B4A2F; transition:color .2s; }
+    .reveal > summary::-webkit-details-marker { display:none; }
+    .reveal > summary:hover { color:#2c3823; }
+    .reveal .rv-ico { display:inline-flex; align-items:center; justify-content:center; width:1.15rem; height:1.15rem; border:1px solid currentColor; font-weight:300; font-size:0.95rem; line-height:1; transition:transform .2s; }
+    .reveal[open] > summary .rv-ico { transform:rotate(45deg); }
+    .reveal[open] > summary .rv-more { display:none; }
+    .reveal .rv-less { display:none; }
+    .reveal[open] > summary .rv-less { display:inline; }
+    .reveal > .rv-body { margin-top:1.25rem; }
+    /* reveal on dark backgrounds */
+    .reveal-dark > summary { color:rgba(255,255,255,0.7); }
+    .reveal-dark > summary:hover { color:#fff; }
   </style>
 </head>
 <body>
@@ -228,12 +242,19 @@
           <p class="text-base leading-relaxed mb-5" style="color:rgba(34,34,34,0.62);">
             RidgePoint Performance Medicine was founded on a simple belief: people deserve healthcare that is honest, effective, and centered on their goals.
           </p>
-          <p class="text-base leading-relaxed mb-5" style="color:rgba(34,34,34,0.62);">
-            After years of practicing within larger healthcare organizations, we recognized that many healthcare systems face increasing pressure around volume, revenue, and efficiency. While these realities are part of modern medicine, we felt something essential was often being lost: meaningful patient relationships, individualized care, and adequate time to understand a patient's goals.
-          </p>
-          <p class="text-base leading-relaxed mb-8" style="color:rgba(34,34,34,0.62);">
-            RidgePoint was created to build a better model — one where trust is earned, outcomes matter, evidence guides decision-making, and every recommendation is made with the patient's best interest in mind.
-          </p>
+
+          <details class="reveal mb-8">
+            <summary><span class="rv-ico">+</span><span class="rv-more">Read the full story</span><span class="rv-less">Show less</span></summary>
+            <div class="rv-body">
+              <p class="text-base leading-relaxed mb-5" style="color:rgba(34,34,34,0.62);">
+                After years of practicing within larger healthcare organizations, we recognized that many healthcare systems face increasing pressure around volume, revenue, and efficiency. While these realities are part of modern medicine, we felt something essential was often being lost: meaningful patient relationships, individualized care, and adequate time to understand a patient's goals.
+              </p>
+              <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+                RidgePoint was created to build a better model — one where trust is earned, outcomes matter, evidence guides decision-making, and every recommendation is made with the patient's best interest in mind.
+              </p>
+            </div>
+          </details>
+
           <a href="why-ridgepoint.html"
              class="inline-flex items-center gap-2 font-raleway font-bold text-xs tracking-[0.22em] uppercase text-rp-primary hover:text-rp-forest transition-colors duration-200">
             What Makes Us Different
@@ -246,9 +267,17 @@
         <div class="space-y-4">
           <div class="bg-white border border-rp-stone p-7">
             <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-4">Mission</div>
-            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.65);">
-              We believe people deserve healthcare that is honest, effective, and centered on their goals. We exist to help people stay active through every stage of life by delivering evidence-based musculoskeletal care focused on meaningful outcomes, respecting patients' time and resources, and always doing what is right for every patient.
+            <p class="text-sm leading-relaxed mb-4" style="color:rgba(34,34,34,0.65);">
+              To help people stay active through every stage of life — with evidence-based musculoskeletal care focused on meaningful outcomes, and always doing what's right for the patient.
             </p>
+            <details class="reveal">
+              <summary><span class="rv-ico">+</span><span class="rv-more">Full mission</span><span class="rv-less">Show less</span></summary>
+              <div class="rv-body">
+                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.65);">
+                  We believe people deserve healthcare that is honest, effective, and centered on their goals. We exist to help people stay active through every stage of life by delivering evidence-based musculoskeletal care focused on meaningful outcomes, respecting patients' time and resources, and always doing what is right for every patient.
+                </p>
+              </div>
+            </details>
           </div>
 
           <div class="bg-white border border-rp-stone p-7">

@@ -30,6 +30,19 @@
     .nav-link { font-size: 0.8125rem; color: rgba(34,34,34,0.52); letter-spacing: 0.04em; transition: color 0.2s; }
     .nav-link:hover { color: #3B4A2F; }
     .service-anchor { scroll-margin-top: 100px; }
+
+    /* ── Progressive-disclosure "reveal" (native details, no JS) ── */
+    .reveal > summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:0.55rem; font-family:'Raleway',sans-serif; font-weight:700; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#3B4A2F; transition:color .2s; }
+    .reveal > summary::-webkit-details-marker { display:none; }
+    .reveal > summary:hover { color:#2c3823; }
+    .reveal .rv-ico { display:inline-flex; align-items:center; justify-content:center; width:1.15rem; height:1.15rem; border:1px solid currentColor; font-weight:300; font-size:0.95rem; line-height:1; transition:transform .2s; }
+    .reveal[open] > summary .rv-ico { transform:rotate(45deg); }
+    .reveal[open] > summary .rv-more { display:none; }
+    .reveal .rv-less { display:none; }
+    .reveal[open] > summary .rv-less { display:inline; }
+    .reveal > .rv-body { margin-top:1.25rem; }
+    .reveal-dark > summary { color:rgba(255,255,255,0.7); }
+    .reveal-dark > summary:hover { color:#fff; }
   </style>
 </head>
 <body>
@@ -108,9 +121,14 @@
           <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
             Every RidgePoint patient begins with a comprehensive Sports Medicine evaluation. This is where the right diagnosis is established before any treatment begins — ensuring your care plan is grounded in an accurate clinical picture, not assumptions.
           </p>
-          <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
-            Our sports medicine physician leads the diagnostic process and provides medical oversight for all patients, coordinating with the rest of the care team to build an individualized plan aligned with your goals.
-          </p>
+          <details class="reveal">
+            <summary><span class="rv-ico">+</span><span class="rv-more">Read more</span><span class="rv-less">Show less</span></summary>
+            <div class="rv-body">
+              <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+                Our sports medicine physician leads the diagnostic process and provides medical oversight for all patients, coordinating with the rest of the care team to build an individualized plan aligned with your goals.
+              </p>
+            </div>
+          </details>
         </div>
 
         <div class="space-y-4">
@@ -164,9 +182,14 @@
           <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
             Rehabilitation at RidgePoint goes beyond passive treatment. We build structured, progressive programs designed to address the root cause of your dysfunction — not just manage the symptoms.
           </p>
-          <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
-            Our rehab specialist works directly from the physician's assessment to develop programs that are personalized to your movement patterns, goals, and timeline. The goal is always functional — getting you back to the things you care about.
-          </p>
+          <details class="reveal">
+            <summary><span class="rv-ico">+</span><span class="rv-more">Read more</span><span class="rv-less">Show less</span></summary>
+            <div class="rv-body">
+              <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+                Our rehab specialist works directly from the physician's assessment to develop programs that are personalized to your movement patterns, goals, and timeline. The goal is always functional — getting you back to the things you care about.
+              </p>
+            </div>
+          </details>
         </div>
 
         <div class="space-y-4">
@@ -224,9 +247,14 @@
           <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
             Dr. Friendt's approach is built on hands-on manual therapy and corrective exercise — not spinal manipulation or adjustments. He uses precise soft tissue techniques to identify and address the underlying drivers of pain and movement restriction, tailored to each patient's individual presentation.
           </p>
-          <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
-            Manual therapy here is not passive care. Every session is paired with corrective exercise so that the work done with his hands carries forward — building real, lasting change rather than temporary relief.
-          </p>
+          <details class="reveal">
+            <summary><span class="rv-ico">+</span><span class="rv-more">Read more</span><span class="rv-less">Show less</span></summary>
+            <div class="rv-body">
+              <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+                Manual therapy here is not passive care. Every session is paired with corrective exercise so that the work done with his hands carries forward — building real, lasting change rather than temporary relief.
+              </p>
+            </div>
+          </details>
         </div>
 
         <div class="space-y-4">
@@ -272,9 +300,14 @@
           <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
             Once pain is managed and movement is restored, the work isn't over. Exercise and performance programming builds the long-term resilience that keeps patients from coming back with the same problem.
           </p>
-          <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
-            This isn't generic gym programming. It is evidence-based, individually designed training that accounts for your injury history, movement patterns, goals, and lifestyle — whether that's running a race, keeping up with your kids, or getting back to work without pain.
-          </p>
+          <details class="reveal">
+            <summary><span class="rv-ico">+</span><span class="rv-more">Read more</span><span class="rv-less">Show less</span></summary>
+            <div class="rv-body">
+              <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+                This isn't generic gym programming. It is evidence-based, individually designed training that accounts for your injury history, movement patterns, goals, and lifestyle — whether that's running a race, keeping up with your kids, or getting back to work without pain.
+              </p>
+            </div>
+          </details>
         </div>
 
         <div class="space-y-4">
@@ -320,9 +353,14 @@
           <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
             Procedural care is a tool within our conservative framework — not a first resort. When conservative management has been appropriately exhausted or when a targeted intervention can meaningfully accelerate recovery, we offer evidence-based options.
           </p>
-          <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
-            All procedures are physician-performed, with ultrasound guidance where appropriate to ensure precision and safety. We explain the evidence for each option clearly so patients can make informed decisions.
-          </p>
+          <details class="reveal">
+            <summary><span class="rv-ico">+</span><span class="rv-more">Read more</span><span class="rv-less">Show less</span></summary>
+            <div class="rv-body">
+              <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+                All procedures are physician-performed, with ultrasound guidance where appropriate to ensure precision and safety. We explain the evidence for each option clearly so patients can make informed decisions.
+              </p>
+            </div>
+          </details>
         </div>
 
         <div class="space-y-4">
