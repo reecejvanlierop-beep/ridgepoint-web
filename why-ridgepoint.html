@@ -27,6 +27,19 @@
     .dot-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 28px 28px; }
     .nav-link { font-size: 0.8125rem; color: rgba(34,34,34,0.52); letter-spacing: 0.04em; transition: color 0.2s; }
     .nav-link:hover { color: #3B4A2F; }
+
+    /* ── Progressive-disclosure "reveal" (native details, no JS) ── */
+    .reveal > summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:0.55rem; font-family:'Raleway',sans-serif; font-weight:700; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#3B4A2F; transition:color .2s; }
+    .reveal > summary::-webkit-details-marker { display:none; }
+    .reveal > summary:hover { color:#2c3823; }
+    .reveal .rv-ico { display:inline-flex; align-items:center; justify-content:center; width:1.15rem; height:1.15rem; border:1px solid currentColor; font-weight:300; font-size:0.95rem; line-height:1; transition:transform .2s; }
+    .reveal[open] > summary .rv-ico { transform:rotate(45deg); }
+    .reveal[open] > summary .rv-more { display:none; }
+    .reveal .rv-less { display:none; }
+    .reveal[open] > summary .rv-less { display:inline; }
+    .reveal > .rv-body { margin-top:1.25rem; }
+    .reveal-dark > summary { color:rgba(255,255,255,0.7); }
+    .reveal-dark > summary:hover { color:#fff; }
   </style>
 </head>
 <body>
@@ -83,7 +96,7 @@
           <span class="font-raleway text-rp-primary text-xs font-bold tracking-[0.38em] uppercase">The Problem</span>
         </div>
         <h2 class="font-raleway text-3xl md:text-4xl font-bold text-rp-charcoal leading-tight mb-6">
-          Traditional MSK Care Often Falls Short
+          Traditional Musculoskeletal Care Often Falls Short
         </h2>
         <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
           The majority of musculoskeletal conditions can be resolved without surgery. But too often, patients are rushed through high-volume systems that default to imaging, procedures, and specialist referrals — rather than taking the time to listen, diagnose accurately, and build a real plan.
@@ -229,19 +242,24 @@
           <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
             Surgery saves lives and restores function when it's needed. But in musculoskeletal care, the question of when it's truly needed is often answered too quickly. Many patients are referred to surgery before conservative options have been adequately explored.
           </p>
-          <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
-            RidgePoint exists specifically to fill that gap. We are specialists in non-operative MSK care — not because we are anti-surgery, but because we believe every patient deserves a thorough, expert attempt at conservative management before that decision is made.
-          </p>
-          <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
-            When surgery is appropriate, we will say so clearly and help facilitate the right referral. When it isn't, we'll build the best possible plan to get you where you want to be without it.
-          </p>
+          <details class="reveal">
+            <summary><span class="rv-ico">+</span><span class="rv-more">Read more</span><span class="rv-less">Show less</span></summary>
+            <div class="rv-body">
+              <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
+                RidgePoint exists specifically to fill that gap. We are specialists in non-operative MSK care — not because we are anti-surgery, but because we believe every patient deserves a thorough, expert attempt at conservative management before that decision is made.
+              </p>
+              <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+                When surgery is appropriate, we will say so clearly and help facilitate the right referral. When it isn't, we'll build the best possible plan to get you where you want to be without it.
+              </p>
+            </div>
+          </details>
         </div>
 
         <div class="space-y-4">
           <div class="p-8 border border-rp-stone bg-rp-warm">
             <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-4">Clinical Positioning</div>
             <p class="font-raleway text-base font-medium text-rp-charcoal leading-relaxed" style="font-style:italic;">
-              "RidgePoint provides evidence-based, non-operative orthopedic and sports medicine care focused on helping patients achieve meaningful outcomes while respecting their goals, time, and resources."
+              "RidgePoint provides evidence-based, non-operative orthopedic care focused on helping patients achieve meaningful outcomes while respecting their goals, time, and resources."
             </p>
           </div>
 

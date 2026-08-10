@@ -27,6 +27,19 @@
     .dot-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 28px 28px; }
     .nav-link { font-size: 0.8125rem; color: rgba(34,34,34,0.52); letter-spacing: 0.04em; transition: color 0.2s; }
     .nav-link:hover { color: #3B4A2F; }
+
+    /* ── Progressive-disclosure "reveal" (native details, no JS) ── */
+    .reveal > summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:0.55rem; font-family:'Raleway',sans-serif; font-weight:700; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#3B4A2F; transition:color .2s; }
+    .reveal > summary::-webkit-details-marker { display:none; }
+    .reveal > summary:hover { color:#2c3823; }
+    .reveal .rv-ico { display:inline-flex; align-items:center; justify-content:center; width:1.15rem; height:1.15rem; border:1px solid currentColor; font-weight:300; font-size:0.95rem; line-height:1; transition:transform .2s; }
+    .reveal[open] > summary .rv-ico { transform:rotate(45deg); }
+    .reveal[open] > summary .rv-more { display:none; }
+    .reveal .rv-less { display:none; }
+    .reveal[open] > summary .rv-less { display:inline; }
+    .reveal > .rv-body { margin-top:1.25rem; }
+    .reveal-dark > summary { color:rgba(255,255,255,0.7); }
+    .reveal-dark > summary:hover { color:#fff; }
   </style>
 </head>
 <body>
@@ -120,7 +133,7 @@
               <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Ligament sprains</span></div>
               <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Acute sports injuries</span></div>
               <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Stress fractures</span></div>
-              <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Concussion</span></div>
+              <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Acute joint &amp; soft tissue injuries</span></div>
             </div>
           </div>
 
@@ -150,7 +163,7 @@
             <div class="space-y-2">
               <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Post-surgical rehabilitation</span></div>
               <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Failed conservative care elsewhere</span></div>
-              <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Second opinion — MSK &amp; sports medicine</span></div>
+              <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Second opinion — musculoskeletal</span></div>
               <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Arthritis management (non-surgical)</span></div>
               <div class="flex items-start gap-2.5"><div class="w-1 h-1 bg-rp-primary flex-shrink-0 mt-2"></div><span class="text-sm" style="color:rgba(34,34,34,0.65);">Return-to-sport clearance</span></div>
             </div>
@@ -214,9 +227,14 @@
           <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
             One of the most common frustrations for referring providers is sending a patient to a specialist and hearing nothing back. We take a different approach.
           </p>
-          <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
-            You will know what we found, what we recommended, and how the patient is progressing. If something comes up that changes the clinical picture — positive or negative — we communicate it. We are a partner in your patient's care, not a destination.
-          </p>
+          <details class="reveal">
+            <summary><span class="rv-ico">+</span><span class="rv-more">Read more</span><span class="rv-less">Show less</span></summary>
+            <div class="rv-body">
+              <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+                You will know what we found, what we recommended, and how the patient is progressing. If something comes up that changes the clinical picture — positive or negative — we communicate it. We are a partner in your patient's care, not a destination.
+              </p>
+            </div>
+          </details>
         </div>
 
         <div class="space-y-4">
@@ -293,7 +311,8 @@
               </div>
               <div>
                 <div class="font-raleway font-semibold text-rp-charcoal text-sm">Phone</div>
-                <div class="text-sm mt-0.5" style="color:rgba(34,34,34,0.32);">Coming soon</div>
+                <div class="text-sm mt-0.5" style="color:rgba(34,34,34,0.55);">(509) 570-6152</div>
+                <div class="text-sm" style="color:rgba(34,34,34,0.55);">Fax: (509) 472-0490</div>
               </div>
             </div>
             <div class="flex gap-4">
@@ -344,7 +363,7 @@
               <select class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" style="color:rgba(34,34,34,0.65);">
                 <option value="">Select...</option>
                 <option>MSK Pain / Injury Evaluation</option>
-                <option>Sports Medicine Evaluation</option>
+                <option>Musculoskeletal Evaluation</option>
                 <option>Rehabilitation</option>
                 <option>Post-Surgical Rehab</option>
                 <option>Second Opinion</option>

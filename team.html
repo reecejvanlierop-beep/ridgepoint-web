@@ -27,6 +27,19 @@
     .dot-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 28px 28px; }
     .nav-link { font-size: 0.8125rem; color: rgba(34,34,34,0.52); letter-spacing: 0.04em; transition: color 0.2s; }
     .nav-link:hover { color: #3B4A2F; }
+
+    /* ── Progressive-disclosure "reveal" (native details, no JS) ── */
+    .reveal > summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:0.55rem; font-family:'Raleway',sans-serif; font-weight:700; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#3B4A2F; transition:color .2s; }
+    .reveal > summary::-webkit-details-marker { display:none; }
+    .reveal > summary:hover { color:#2c3823; }
+    .reveal .rv-ico { display:inline-flex; align-items:center; justify-content:center; width:1.15rem; height:1.15rem; border:1px solid currentColor; font-weight:300; font-size:0.95rem; line-height:1; transition:transform .2s; }
+    .reveal[open] > summary .rv-ico { transform:rotate(45deg); }
+    .reveal[open] > summary .rv-more { display:none; }
+    .reveal .rv-less { display:none; }
+    .reveal[open] > summary .rv-less { display:inline; }
+    .reveal > .rv-body { margin-top:1.25rem; }
+    .reveal-dark > summary { color:rgba(255,255,255,0.7); }
+    .reveal-dark > summary:hover { color:#fff; }
   </style>
 </head>
 <body>
@@ -77,7 +90,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-px bg-rp-stone">
         <div class="bg-white px-10 py-8">
           <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-3">Physician-Led</div>
-          <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Every patient begins with a sports medicine physician evaluation. Diagnosis first — treatment follows from a clear clinical picture.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Every patient begins with a physician-led musculoskeletal evaluation. Diagnosis first — treatment follows from a clear clinical picture.</p>
         </div>
         <div class="bg-white px-10 py-8">
           <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-3">Coordinated</div>
@@ -122,14 +135,22 @@
           <div class="font-raleway text-[10px] font-bold tracking-[0.3em] text-rp-sage uppercase mb-8">Sports Medicine Physician</div>
 
           <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
-            Dr. Anderson is a board-certified sports medicine physician with over 15 years of experience in non-surgical orthopedic care. He studied Kinesiology at the University of Colorado Boulder, earned his medical degree from Oregon Health & Science University, and completed an active-duty Air Force residency in Family Medicine at Travis Air Force Base. After fulfilling his service commitment at Fairchild Air Force Base in Spokane, he went on to complete a primary care sports medicine fellowship at the Idaho Sports Medicine Institute in 2008.
+            Dr. Anderson is a board-certified sports medicine physician with over 15 years of experience in non-surgical orthopedic care. He earned his medical degree from Oregon Health & Science University and completed a primary care sports medicine fellowship at the Idaho Sports Medicine Institute.
           </p>
-          <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
-            Dr. Anderson spent over 14 years in the Orthopedics and Sports Medicine department at Rockwood Clinic before transitioning to private practice. Throughout his career, he has served as a team physician for local high schools, Eastern Washington University, and the Spokane Shock, and has been part of the US Ski Team physician pool. He specializes in sports-related injuries, musculoskeletal conditions, and care for active adults of all ages.
-          </p>
-          <p class="text-base leading-relaxed mb-10" style="color:rgba(34,34,34,0.62);">
-            A former competitive road cyclist and freestyle skier, Dr. Anderson understands what it means to stay active — and what it takes to get back there. Outside the clinic, he enjoys spending time with his wife and two daughters.
-          </p>
+          <details class="reveal mb-10">
+            <summary><span class="rv-ico">+</span><span class="rv-more">Read full bio</span><span class="rv-less">Show less</span></summary>
+            <div class="rv-body">
+              <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
+                He studied Kinesiology at the University of Colorado Boulder and completed an active-duty Air Force residency in Family Medicine at Travis Air Force Base. After fulfilling his service commitment at Fairchild Air Force Base in Spokane, he completed his sports medicine fellowship in 2008.
+              </p>
+              <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
+                Dr. Anderson spent over 14 years in the Orthopedics and Sports Medicine department at Rockwood Clinic before transitioning to private practice. Throughout his career, he has served as a team physician for local high schools, Eastern Washington University, and the Spokane Shock, and has been part of the US Ski Team physician pool. He specializes in sports-related injuries, musculoskeletal conditions, and care for active adults of all ages.
+              </p>
+              <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+                A former competitive road cyclist and freestyle skier, Dr. Anderson understands what it means to stay active — and what it takes to get back there. Outside the clinic, he enjoys spending time with his wife and two daughters.
+              </p>
+            </div>
+          </details>
 
           <div class="space-y-4">
             <div class="border-l-4 border-rp-primary pl-6 py-1">
@@ -192,14 +213,22 @@
           <div class="font-raleway text-[10px] font-bold tracking-[0.3em] text-rp-sage uppercase mb-8">Doctor of Chiropractic</div>
 
           <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
-            Dr. Friendt brings over a decade of clinical experience to RidgePoint, including years working directly alongside orthopedic surgeons and sports medicine physicians in the Houston Medical Center — one of the largest and most complex medical environments in the United States. That background shaped his clinical precision, his collaborative instincts, and his ability to function within a high-stakes, team-based care environment.
+            Dr. Friendt brings over a decade of clinical experience to RidgePoint, including years working directly alongside orthopedic surgeons and sports medicine physicians in the Houston Medical Center. His practice is grounded in hands-on manual therapy and corrective exercise — not spinal manipulation or adjustments.
           </p>
-          <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
-            A former Division I pole vaulter and decathlete at the University of Minnesota, Dr. Friendt understands athletic performance and injury from the inside out. He earned his Doctorate from Texas Chiropractic College and built his clinical career treating elite athletes, surgical patients, and complex MSK cases alongside orthopedic and sports medicine teams.
-          </p>
-          <p class="text-base leading-relaxed mb-10" style="color:rgba(34,34,34,0.62);">
-            Dr. Friendt's practice is grounded in hands-on manual therapy and corrective exercise — not spinal manipulation or adjustments. He uses precise soft tissue techniques to address the underlying drivers of pain and dysfunction, and pairs that work with corrective exercise so results carry forward between sessions. His training includes the Fascial Distortion Model, which informs how he assesses and interprets each patient's presentation.
-          </p>
+          <details class="reveal mb-10">
+            <summary><span class="rv-ico">+</span><span class="rv-more">Read full bio</span><span class="rv-less">Show less</span></summary>
+            <div class="rv-body">
+              <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
+                Working in one of the largest and most complex medical environments in the United States shaped his clinical precision, his collaborative instincts, and his ability to function within a high-stakes, team-based care environment.
+              </p>
+              <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
+                A former Division I pole vaulter and decathlete at the University of Minnesota, Dr. Friendt understands athletic performance and injury from the inside out. He earned his Doctorate from Texas Chiropractic College and built his clinical career treating elite athletes, surgical patients, and complex MSK cases alongside orthopedic and sports medicine teams.
+              </p>
+              <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+                He uses precise soft tissue techniques to address the underlying drivers of pain and dysfunction, and pairs that work with corrective exercise so results carry forward between sessions. His training includes the Fascial Distortion Model (FDM) — a non-traditional, hands-on framework that uses the way a patient describes and gestures to their pain to guide treatment — which informs how he assesses and interprets each patient's presentation.
+              </p>
+            </div>
+          </details>
 
           <div class="space-y-4">
             <div class="border-l-4 border-rp-primary pl-6 py-1">
@@ -261,14 +290,22 @@
           <div class="font-raleway text-[10px] font-bold tracking-[0.3em] text-rp-sage uppercase mb-8">Rehab Specialist</div>
 
           <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
-            A Spokane native, Reece earned his degree in Applied Kinesiology from Corban University where he developed a deep foundation in human movement, biomechanics, and exercise science. He joined RidgePoint with a clear vision: to build a clinic where rehabilitation is done right — grounded in clinical reasoning, connected to a physician-led team, and focused on functional outcomes that actually matter to patients.
+            A Spokane native, Reece earned his degree in Applied Kinesiology from Corban University and specializes in bridging the critical gap between receiving a diagnosis and achieving long-term function.
           </p>
-          <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
-            Reece specializes in bridging the critical gap between receiving a diagnosis and achieving long-term function. He builds progressive, individualized rehab programs based on each patient's movement patterns, goals, and clinical presentation — not templates. His patients consistently report that he listens carefully, explains things clearly, and pushes them to achieve more than they thought possible.
-          </p>
-          <p class="text-base leading-relaxed mb-10" style="color:rgba(34,34,34,0.62);">
-            Outside the clinic, Reece stays active and maintains a deep connection to the Spokane community — which shapes how he understands what staying active really means to the people he works with.
-          </p>
+          <details class="reveal mb-10">
+            <summary><span class="rv-ico">+</span><span class="rv-more">Read full bio</span><span class="rv-less">Show less</span></summary>
+            <div class="rv-body">
+              <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
+                At Corban he developed a deep foundation in human movement, biomechanics, and exercise science. He joined RidgePoint with a clear vision: to build a clinic where rehabilitation is done right — grounded in clinical reasoning, connected to a physician-led team, and focused on functional outcomes that actually matter to patients.
+              </p>
+              <p class="text-base leading-relaxed mb-6" style="color:rgba(34,34,34,0.62);">
+                He builds progressive, individualized rehab programs based on each patient's movement patterns, goals, and clinical presentation — not templates. His patients consistently report that he listens carefully, explains things clearly, and pushes them to achieve more than they thought possible.
+              </p>
+              <p class="text-base leading-relaxed" style="color:rgba(34,34,34,0.62);">
+                Outside the clinic, Reece stays active and maintains a deep connection to the Spokane community — which shapes how he understands what staying active really means to the people he works with.
+              </p>
+            </div>
+          </details>
 
           <div class="space-y-4">
             <div class="border-l-4 border-rp-primary pl-6 py-1">
