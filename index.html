@@ -460,37 +460,39 @@
             Fill out the form below and our team will reach out promptly to schedule your initial evaluation.
           </p>
 
-          <form class="space-y-4">
+          <form id="appointment-form" class="space-y-4"
+                action="https://formspree.io/f/mgawgayk" method="POST">
+            <input type="hidden" name="_subject" value="New Appointment Request — ridgepointmed.com" />
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2"
                        style="color:rgba(34,34,34,0.45);">First Name</label>
-                <input type="text" placeholder="First name"
+                <input type="text" name="first_name" required placeholder="First name"
                        class="w-full bg-white border border-rp-stone px-4 py-3 text-sm text-rp-charcoal placeholder-rp-charcoal/25 focus:outline-none focus:border-rp-primary transition-colors" />
               </div>
               <div>
                 <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2"
                        style="color:rgba(34,34,34,0.45);">Last Name</label>
-                <input type="text" placeholder="Last name"
+                <input type="text" name="last_name" required placeholder="Last name"
                        class="w-full bg-white border border-rp-stone px-4 py-3 text-sm text-rp-charcoal placeholder-rp-charcoal/25 focus:outline-none focus:border-rp-primary transition-colors" />
               </div>
             </div>
             <div>
               <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2"
                      style="color:rgba(34,34,34,0.45);">Email</label>
-              <input type="email" placeholder="your@email.com"
+              <input type="email" name="email" required placeholder="your@email.com"
                      class="w-full bg-white border border-rp-stone px-4 py-3 text-sm text-rp-charcoal placeholder-rp-charcoal/25 focus:outline-none focus:border-rp-primary transition-colors" />
             </div>
             <div>
               <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2"
                      style="color:rgba(34,34,34,0.45);">Phone</label>
-              <input type="tel" placeholder="(509) 000-0000"
+              <input type="tel" name="phone" placeholder="(509) 000-0000"
                      class="w-full bg-white border border-rp-stone px-4 py-3 text-sm text-rp-charcoal placeholder-rp-charcoal/25 focus:outline-none focus:border-rp-primary transition-colors" />
             </div>
             <div>
               <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2"
                      style="color:rgba(34,34,34,0.45);">Reason for Visit</label>
-              <select class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors"
+              <select name="reason" class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors"
                       style="color:rgba(34,34,34,0.65);">
                 <option value="">Select a reason...</option>
                 <option>Pain / Injury</option>
@@ -505,7 +507,7 @@
             <div>
               <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2"
                      style="color:rgba(34,34,34,0.45);">Message (optional)</label>
-              <textarea rows="3" placeholder="Tell us a bit about what's going on..."
+              <textarea rows="3" name="message" placeholder="Tell us a bit about what's going on..."
                         class="w-full bg-white border border-rp-stone px-4 py-3 text-sm text-rp-charcoal placeholder-rp-charcoal/25 focus:outline-none focus:border-rp-primary transition-colors resize-none"></textarea>
             </div>
             <div>
@@ -524,6 +526,7 @@
                     class="w-full bg-rp-primary text-white font-raleway font-bold text-xs tracking-[0.22em] uppercase px-8 py-4 hover:bg-rp-forest transition-colors duration-200 mt-2">
               Submit Request
             </button>
+            <p id="appointment-status" class="text-sm text-center mt-2 hidden" style="color:rgba(34,34,34,0.7);"></p>
           </form>
         </div>
 
@@ -663,6 +666,35 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Submits the appointment form to Formspree (routes to info@ridgepointmed.com)
+    // without leaving the page, and shows an inline thank-you message.
+    (function () {
+      var form = document.getElementById('appointment-form');
+      if (!form) return;
+      var status = document.getElementById('appointment-status');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        status.classList.remove('hidden');
+        status.textContent = 'Sending…';
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            form.reset();
+            status.textContent = 'Thank you — your request has been sent. Our team will reach out shortly.';
+          } else {
+            status.textContent = 'Something went wrong. Please email info@ridgepointmed.com directly.';
+          }
+        }).catch(function () {
+          status.textContent = 'Something went wrong. Please email info@ridgepointmed.com directly.';
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>

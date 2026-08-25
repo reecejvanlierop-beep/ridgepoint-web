@@ -302,7 +302,7 @@
               <div>
                 <div class="font-raleway font-semibold text-rp-charcoal text-sm">Email</div>
                 <div class="text-sm mt-0.5" style="color:rgba(34,34,34,0.55);">info@ridgepointmed.com</div>
-                <div class="text-xs mt-0.5" style="color:rgba(34,34,34,0.35);">Include patient name, DOB, reason for referral, and any relevant imaging</div>
+                <div class="text-xs mt-0.5" style="color:rgba(34,34,34,0.35);">For secure transmission of patient records and imaging, contact us and we'll coordinate directly</div>
               </div>
             </div>
             <div class="flex gap-4">
@@ -330,37 +330,27 @@
         <!-- Referral Form -->
         <div class="bg-rp-warm border border-rp-stone p-8">
           <h3 class="font-raleway font-bold text-rp-charcoal text-lg mb-6">Send a Referral</h3>
-          <form class="space-y-4">
+          <form id="referral-form" class="space-y-4"
+                action="https://formspree.io/f/mgawgayk" method="POST">
+            <input type="hidden" name="_subject" value="New Provider Referral — ridgepointmed.com" />
             <div>
               <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Your Name &amp; Practice</label>
-              <input type="text" placeholder="Dr. Jane Smith — Spokane Family Medicine"
+              <input type="text" name="provider_name_practice" required placeholder="Dr. Jane Smith — Spokane Family Medicine"
                      class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" />
             </div>
             <div>
               <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Your Email</label>
-              <input type="email" placeholder="your@practice.com"
+              <input type="email" name="provider_email" required placeholder="your@practice.com"
                      class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" />
             </div>
-            <div class="grid grid-cols-2 gap-4">
-              <div>
-                <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Patient First Name</label>
-                <input type="text" placeholder="First name"
-                       class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" />
-              </div>
-              <div>
-                <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Patient Last Name</label>
-                <input type="text" placeholder="Last name"
-                       class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" />
-              </div>
-            </div>
             <div>
-              <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Patient Date of Birth</label>
-              <input type="text" placeholder="MM/DD/YYYY"
+              <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Your Phone</label>
+              <input type="tel" name="provider_phone" placeholder="(509) 000-0000"
                      class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" />
             </div>
             <div>
               <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Reason for Referral</label>
-              <select class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" style="color:rgba(34,34,34,0.65);">
+              <select name="reason" class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" style="color:rgba(34,34,34,0.65);">
                 <option value="">Select...</option>
                 <option>MSK Pain / Injury Evaluation</option>
                 <option>Musculoskeletal Evaluation</option>
@@ -372,14 +362,16 @@
                 <option>Other</option>
               </select>
             </div>
-            <div>
-              <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Clinical Notes (optional)</label>
-              <textarea rows="3" placeholder="Relevant history, imaging, prior treatment..."
-                        class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors resize-none"></textarea>
+            <div class="bg-white border border-rp-stone px-4 py-3">
+              <p class="text-xs leading-relaxed" style="color:rgba(34,34,34,0.6);">
+                Please do <strong>not</strong> include patient details here. Submit your contact info and our team
+                will reach out to securely collect patient information and clinical notes.
+              </p>
             </div>
             <button type="submit" class="w-full bg-rp-primary text-white font-raleway font-bold text-xs tracking-[0.22em] uppercase px-8 py-4 hover:bg-rp-forest transition-colors duration-200">
               Submit Referral
             </button>
+            <p id="referral-status" class="text-sm text-center mt-2 hidden" style="color:rgba(34,34,34,0.7);"></p>
           </form>
         </div>
 
@@ -429,6 +421,35 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Submits the referral form to Formspree (routes to info@ridgepointmed.com)
+    // without leaving the page, and shows an inline thank-you message.
+    (function () {
+      var form = document.getElementById('referral-form');
+      if (!form) return;
+      var status = document.getElementById('referral-status');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        status.classList.remove('hidden');
+        status.textContent = 'Sending…';
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            form.reset();
+            status.textContent = 'Thank you — your referral has been sent. Our team will reach out shortly.';
+          } else {
+            status.textContent = 'Something went wrong. Please email info@ridgepointmed.com directly.';
+          }
+        }).catch(function () {
+          status.textContent = 'Something went wrong. Please email info@ridgepointmed.com directly.';
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
