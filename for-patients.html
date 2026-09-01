@@ -31,6 +31,8 @@
     details summary::-webkit-details-marker { display: none; }
     details[open] .faq-icon { transform: rotate(45deg); }
     .faq-icon { transition: transform 0.2s; }
+    .reveal-pricing .pr-ico::before { content: "+"; }
+    .reveal-pricing[open] .pr-ico::before { content: "\2013"; }
   </style>
 </head>
 <body>
@@ -76,6 +78,7 @@
         <a href="#what-to-expect" class="text-xs px-4 py-2 font-raleway font-semibold tracking-widest uppercase transition-colors duration-200" style="border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.45)'" onmouseout="this.style.color='rgba(255,255,255,0.55)';this.style.borderColor='rgba(255,255,255,0.18)'">What to Expect</a>
         <a href="#conditions"     class="text-xs px-4 py-2 font-raleway font-semibold tracking-widest uppercase transition-colors duration-200" style="border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.45)'" onmouseout="this.style.color='rgba(255,255,255,0.55)';this.style.borderColor='rgba(255,255,255,0.18)'">Conditions We Treat</a>
         <a href="#prepare"        class="text-xs px-4 py-2 font-raleway font-semibold tracking-widest uppercase transition-colors duration-200" style="border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.45)'" onmouseout="this.style.color='rgba(255,255,255,0.55)';this.style.borderColor='rgba(255,255,255,0.18)'">How to Prepare</a>
+        <a href="#pricing"        class="text-xs px-4 py-2 font-raleway font-semibold tracking-widest uppercase transition-colors duration-200" style="border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.45)'" onmouseout="this.style.color='rgba(255,255,255,0.55)';this.style.borderColor='rgba(255,255,255,0.18)'">Insurance &amp; Pricing</a>
         <a href="#faq"            class="text-xs px-4 py-2 font-raleway font-semibold tracking-widest uppercase transition-colors duration-200" style="border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.55);" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.45)'" onmouseout="this.style.color='rgba(255,255,255,0.55)';this.style.borderColor='rgba(255,255,255,0.18)'">FAQ</a>
       </div>
     </div>
@@ -99,6 +102,128 @@
     </div>
   </section>
 
+  <!-- INSURANCE & PRICING -->
+  <section id="pricing" class="py-24 bg-white" style="scroll-margin-top:100px;">
+    <div class="max-w-6xl mx-auto px-6 lg:px-10">
+
+      <div class="flex items-center gap-3 mb-5">
+        <div class="h-px w-8 bg-rp-primary"></div>
+        <span class="font-raleway text-rp-primary text-xs font-bold tracking-[0.38em] uppercase">Insurance &amp; Pricing</span>
+      </div>
+      <h2 class="font-raleway text-4xl md:text-[2.75rem] font-bold text-rp-charcoal leading-tight mb-4">
+        Insurance Accepted — Self-Pay Welcome
+      </h2>
+      <p class="text-base leading-relaxed mb-12 max-w-2xl" style="color:rgba(34,34,34,0.55);">
+        We're in-network with major insurers and offer clear, published self-pay pricing. Either way, there are no surprises.
+      </p>
+
+      <!-- Insurance -->
+      <div class="border border-rp-stone bg-rp-warm p-8 md:p-10 mb-6">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-12 items-center">
+          <div>
+            <h3 class="font-raleway text-2xl font-bold text-rp-charcoal mb-3">We Accept Insurance</h3>
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">
+              In-network with the plans below. Coverage can vary — contact us at
+              <span class="text-rp-primary font-medium">info@ridgepointmed.com</span> and we'll verify your specific plan and benefits before your visit.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="bg-white border border-rp-stone px-4 py-5 text-center flex items-center justify-center min-h-[64px]"><span class="font-raleway font-bold text-rp-charcoal text-sm">Premera</span></div>
+            <div class="bg-white border border-rp-stone px-4 py-5 text-center flex items-center justify-center min-h-[64px]"><span class="font-raleway font-bold text-rp-charcoal text-sm">Cigna</span></div>
+            <div class="bg-white border border-rp-stone px-4 py-5 text-center flex items-center justify-center min-h-[64px]"><span class="font-raleway font-bold text-rp-charcoal text-sm leading-tight">First Choice Health</span></div>
+            <div class="bg-white border border-rp-stone px-4 py-5 text-center flex items-center justify-center min-h-[64px]"><span class="font-raleway font-bold text-rp-charcoal text-sm">Aetna</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Self-Pay -->
+      <div class="border border-rp-stone bg-white p-8 md:p-10">
+        <details class="reveal-pricing" open>
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <div>
+              <h3 class="font-raleway text-2xl font-bold text-rp-charcoal mb-1">Self-Pay Pricing</h3>
+              <p class="text-sm" style="color:rgba(34,34,34,0.55);">Paying out of pocket? Here's exactly what you'll pay.</p>
+            </div>
+            <span class="pr-ico font-raleway text-rp-primary text-2xl font-light leading-none flex-shrink-0"></span>
+          </summary>
+
+          <div class="pt-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
+
+              <!-- Office Visits -->
+              <div>
+                <h4 class="font-raleway text-lg font-bold text-rp-charcoal mb-4">Office Visits</h4>
+                <div class="border border-rp-stone">
+                  <div class="flex items-center justify-between px-5 py-3" style="background-color:#3B4A2F;">
+                    <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase" style="color:rgba(255,255,255,0.8);">Office Visit</span>
+                    <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase" style="color:rgba(255,255,255,0.8);">Price</span>
+                  </div>
+                  <div class="flex items-center justify-between px-5 py-4 border-b border-rp-stone">
+                    <span class="text-sm text-rp-charcoal">New Patient Visit <span style="color:rgba(34,34,34,0.45);">(medical or chiro)</span></span>
+                    <span class="font-raleway font-bold text-rp-charcoal text-sm whitespace-nowrap ml-4">$250</span>
+                  </div>
+                  <div class="flex items-center justify-between px-5 py-4">
+                    <span class="text-sm text-rp-charcoal">Follow-Up Visit <span style="color:rgba(34,34,34,0.45);">(medical or chiro)</span></span>
+                    <span class="font-raleway font-bold text-rp-charcoal text-sm whitespace-nowrap ml-4">$150</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Procedures -->
+              <div>
+                <h4 class="font-raleway text-lg font-bold text-rp-charcoal mb-1">Procedures</h4>
+                <p class="text-sm italic mb-4" style="color:rgba(34,34,34,0.5);">All procedures are ultrasound guided.</p>
+                <div class="border border-rp-stone">
+                  <div class="flex items-center justify-between px-5 py-3" style="background-color:#3B4A2F;">
+                    <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase" style="color:rgba(255,255,255,0.8);">Procedure</span>
+                    <span class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase" style="color:rgba(255,255,255,0.8);">Price</span>
+                  </div>
+                  <div class="flex items-center justify-between px-5 py-3.5 border-b border-rp-stone">
+                    <span class="text-sm text-rp-charcoal">Corticosteroid injection <span style="color:rgba(34,34,34,0.45);">(joint or tendon sheath)</span></span>
+                    <span class="font-raleway font-bold text-rp-charcoal text-sm whitespace-nowrap ml-4">$200</span>
+                  </div>
+                  <div class="flex items-center justify-between px-5 py-3.5 border-b border-rp-stone">
+                    <span class="text-sm text-rp-charcoal">D5W or prolotherapy injection<sup class="text-rp-primary">*</sup></span>
+                    <span class="font-raleway font-bold text-rp-charcoal text-sm whitespace-nowrap ml-4">$200</span>
+                  </div>
+                  <div class="flex items-center justify-between px-5 py-3.5 border-b border-rp-stone">
+                    <span class="text-sm text-rp-charcoal">Nerve hydro-dissection with D5W</span>
+                    <span class="font-raleway font-bold text-rp-charcoal text-sm whitespace-nowrap ml-4">$200</span>
+                  </div>
+                  <div class="flex items-center justify-between px-5 py-3.5 border-b border-rp-stone">
+                    <span class="text-sm text-rp-charcoal">Hyalgan injection <span style="color:rgba(34,34,34,0.45);">(per injection)</span></span>
+                    <span class="font-raleway font-bold text-rp-charcoal text-sm whitespace-nowrap ml-4">$250</span>
+                  </div>
+                  <div class="flex items-center justify-between px-5 py-3.5 border-b border-rp-stone">
+                    <span class="text-sm text-rp-charcoal">PRP injection <span style="color:rgba(34,34,34,0.45);">(unilateral)</span></span>
+                    <span class="font-raleway font-bold text-rp-charcoal text-sm whitespace-nowrap ml-4">$550</span>
+                  </div>
+                  <div class="flex items-center justify-between px-5 py-3.5 border-b border-rp-stone">
+                    <span class="text-sm text-rp-charcoal">PRP injection <span style="color:rgba(34,34,34,0.45);">(bilateral)</span></span>
+                    <span class="font-raleway font-bold text-rp-charcoal text-sm whitespace-nowrap ml-4">$900</span>
+                  </div>
+                  <div class="flex items-center justify-between px-5 py-3.5 border-b border-rp-stone">
+                    <span class="text-sm text-rp-charcoal">PRFM injection <span style="color:rgba(34,34,34,0.45);">(unilateral)</span></span>
+                    <span class="font-raleway font-bold text-rp-charcoal text-sm whitespace-nowrap ml-4">$550</span>
+                  </div>
+                  <div class="flex items-center justify-between px-5 py-3.5">
+                    <span class="text-sm text-rp-charcoal">PRFM injection <span style="color:rgba(34,34,34,0.45);">(bilateral)</span></span>
+                    <span class="font-raleway font-bold text-rp-charcoal text-sm whitespace-nowrap ml-4">$900</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="mt-5 text-xs leading-relaxed" style="color:rgba(34,34,34,0.45);">
+              <p><sup class="text-rp-primary">*</sup> D5W = 5% dextrose in water · Prolotherapy = dextrose, saline &amp; local anesthetic · PRP = Platelet Rich Plasma · PRFM = Platelet Rich Fibrin Matrix</p>
+            </div>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
   <!-- WHAT TO EXPECT -->
   <section id="what-to-expect" class="py-24" style="background-color:#F6F6F3; scroll-margin-top:100px;">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
@@ -116,7 +241,7 @@
               <div class="font-raleway text-2xl font-extrabold text-rp-stone flex-shrink-0">01</div>
               <div>
                 <h3 class="font-raleway font-bold text-rp-charcoal text-base mb-3">A Real Conversation</h3>
-                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Your first appointment starts with us listening. We want to understand your pain or problem, how it affects your daily life, what you've already tried, and what you're hoping to get back to. This context shapes everything that comes next.</p>
+                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Your appointment starts with us listening — understanding your problem, how it affects daily life, what you've tried, and what you want to get back to. This context shapes everything that follows.</p>
               </div>
             </div>
           </div>
@@ -126,7 +251,7 @@
               <div class="font-raleway text-2xl font-extrabold text-rp-stone flex-shrink-0">02</div>
               <div>
                 <h3 class="font-raleway font-bold text-rp-charcoal text-base mb-3">Thorough Physical Examination</h3>
-                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Our sports medicine physician performs a comprehensive physical exam specific to your complaint. We assess movement, strength, range of motion, and any relevant joint or soft tissue findings — not a five-minute checkout.</p>
+                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Our physician performs a comprehensive exam specific to your complaint — movement, strength, range of motion, and any relevant joint or soft-tissue findings. Not a five-minute checkout.</p>
               </div>
             </div>
           </div>
@@ -136,7 +261,7 @@
               <div class="font-raleway text-2xl font-extrabold text-rp-stone flex-shrink-0">03</div>
               <div>
                 <h3 class="font-raleway font-bold text-rp-charcoal text-base mb-3">A Clear Diagnosis</h3>
-                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">We explain what we think is happening in plain language. If imaging is clinically indicated, we'll order it or review what you've already had. If it isn't needed, we'll explain why — and you won't be sent for unnecessary scans.</p>
+                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">We explain what's happening in plain language. If imaging is clinically indicated we'll order it or review what you have — if it isn't, we'll explain why, and you won't be sent for unnecessary scans.</p>
               </div>
             </div>
           </div>
@@ -146,7 +271,7 @@
               <div class="font-raleway text-2xl font-extrabold text-rp-stone flex-shrink-0">04</div>
               <div>
                 <h3 class="font-raleway font-bold text-rp-charcoal text-base mb-3">Your Personalized Plan</h3>
-                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Before you leave, you'll know exactly what the plan is — whether that's rehab, manual therapy, a follow-up visit, or a combination. You'll know what we expect to happen and what to watch for. No mystery, no guessing.</p>
+                <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">Before you leave, you'll know exactly what the plan is — rehab, manual therapy, a follow-up, or a combination — and what to expect next. No mystery, no guessing.</p>
               </div>
             </div>
           </div>
@@ -159,17 +284,14 @@
               You will leave knowing what's wrong, why it's happening, and what we're going to do about it.
             </p>
             <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5);">
-              Too many patients leave medical appointments more confused than when they arrived. That's not acceptable care. We take the time to explain things clearly — because understanding your condition is part of recovering from it.
+              Too many patients leave appointments more confused than when they arrived. We take the time to explain clearly — because understanding your condition is part of recovering from it.
             </p>
           </div>
 
           <div class="bg-white border border-rp-stone p-7">
             <div class="font-raleway text-[10px] font-bold tracking-[0.4em] text-rp-primary uppercase mb-4">Integrated Care Team</div>
-            <p class="text-sm leading-relaxed mb-4" style="color:rgba(34,34,34,0.6);">
-              Depending on your needs, your care at RidgePoint may involve our sports medicine physician, rehab specialist, and/or chiropractor — all working from the same plan.
-            </p>
             <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">
-              You won't have to re-explain your history to each person. The team communicates internally so your care is seamless.
+              Your care may involve our physician, rehab specialist, and/or chiropractor — all working from the same plan. You won't have to re-explain your history to each one; the team communicates internally so your care is seamless.
             </p>
           </div>
 
@@ -279,10 +401,9 @@
     </div>
   </section>
 
-  <!-- PHOTO BAND -->
-  <div class="relative overflow-hidden" style="height: 380px;">
-    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1800&q=80" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover" style="object-position: center 40%;" />
-    <div class="absolute inset-0" style="background: rgba(15,61,46,0.55);"></div>
+  <!-- STATEMENT BAND -->
+  <div class="relative overflow-hidden dot-grid" style="height: 380px; background-color:#3B4A2F;">
+    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(31,90,58,0.55) 0%, transparent 72%);"></div>
     <div class="relative z-10 h-full flex items-center justify-center text-center px-6">
       <div>
         <p class="font-raleway text-[10px] font-bold tracking-[0.5em] uppercase mb-5" style="color:rgba(255,255,255,0.38);">Your First Visit</p>
@@ -381,7 +502,7 @@
             <span class="faq-icon w-6 h-6 flex-shrink-0 flex items-center justify-center border border-rp-stone text-rp-primary font-raleway text-lg font-light leading-none">+</span>
           </summary>
           <div class="px-7 pb-6 pt-1">
-            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">RidgePoint is a comprehensive musculoskeletal clinic, not a standalone PT clinic. We begin with a physician-led musculoskeletal evaluation, which establishes the diagnosis and guides the plan. From there, care may involve rehabilitation, manual therapy, corrective exercise, or procedural care — all from one integrated team. This model catches things that might be missed when starting treatment without a diagnosis.</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">We're a comprehensive musculoskeletal clinic, not a standalone PT clinic. We begin with a physician-led evaluation that establishes the diagnosis, then build care — rehab, manual therapy, or procedural — from one integrated team. This catches things that get missed when treatment starts without a diagnosis.</p>
           </div>
         </details>
 
@@ -391,7 +512,7 @@
             <span class="faq-icon w-6 h-6 flex-shrink-0 flex items-center justify-center border border-rp-stone text-rp-primary font-raleway text-lg font-light leading-none">+</span>
           </summary>
           <div class="px-7 pb-6 pt-1">
-            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">The majority of musculoskeletal conditions can be managed effectively without surgery. Our approach is conservative-first — we exhaust non-operative options before considering anything more invasive. But if our team believes surgery is the best option for you, we'll tell you clearly and connect you with our network of top-tier orthopedic surgeons in the area. Either way, you'll always know where you stand.</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">Most musculoskeletal conditions can be managed without surgery, and our approach is conservative-first. If our team believes surgery is the best option, we'll tell you clearly and connect you with top-tier orthopedic surgeons in the area. Either way, you'll always know where you stand.</p>
           </div>
         </details>
 
@@ -431,13 +552,15 @@
             <span class="faq-icon w-6 h-6 flex-shrink-0 flex items-center justify-center border border-rp-stone text-rp-primary font-raleway text-lg font-light leading-none">+</span>
           </summary>
           <div class="px-7 pb-6 pt-1">
-            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">Absolutely. Many of our patients have seen other providers before coming to RidgePoint. We start fresh with a physician evaluation to make sure the diagnosis is correct — sometimes the reason previous treatment didn't work is that the underlying problem wasn't fully identified. We don't dismiss prior care; we build on what's been tried and fill in the gaps.</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.62);">Absolutely — many of our patients have seen other providers first. We start fresh with a physician evaluation to confirm the diagnosis, since treatment often fails when the underlying problem wasn't fully identified. We build on what's been tried and fill in the gaps.</p>
           </div>
         </details>
 
       </div>
     </div>
   </section>
+
+  <!-- (Insurance & Pricing moved up, directly below the hero) -->
 
   <!-- CTA -->
   <section class="py-20 dot-grid" style="background-color:#3B4A2F;">
