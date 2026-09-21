@@ -99,8 +99,13 @@
   </nav>
 
   <!-- PAGE HERO -->
-  <section class="dot-grid pt-36 pb-20" style="background-color:#3B4A2F;">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+  <section class="relative dot-grid pt-36 pb-20 overflow-hidden" style="background-color:#3B4A2F;">
+    <img src="images/clinic-office-credentials.jpg"
+         alt="Physician office with framed credentials at Ridgepoint in Spokane"
+         class="absolute inset-0 w-full h-full object-cover" style="object-position:center 40%;" />
+    <div class="absolute inset-0 pointer-events-none"
+         style="background: linear-gradient(100deg, rgba(30,40,24,0.95) 0%, rgba(30,40,24,0.85) 42%, rgba(30,40,24,0.62) 100%);"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
       <p class="font-raleway text-xs tracking-[0.5em] uppercase mb-6" style="color:rgba(255,255,255,0.28);">Ridgepoint Performance Medicine</p>
       <h1 class="font-raleway font-extrabold text-white leading-tight mb-6" style="font-size: clamp(2.2rem, 5vw, 4rem);">For Providers</h1>
       <p class="text-lg max-w-2xl leading-relaxed" style="color:rgba(255,255,255,0.5);">
@@ -236,6 +241,32 @@
       </div>
     </div>
   </section>
+
+  <!-- CREDENTIALS PHOTO SPLIT -->
+  <section class="bg-white">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="relative min-h-[340px] lg:min-h-[480px]">
+        <img src="images/detail-diploma.jpg"
+             alt="Framed physician credentials at Ridgepoint Performance Medicine"
+             class="absolute inset-0 w-full h-full object-cover" style="object-position:center 35%;" loading="lazy" />
+      </div>
+      <div class="flex items-center" style="background-color:#3B4A2F;">
+        <div class="px-8 py-16 lg:px-16 lg:py-20 max-w-lg">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="h-px w-8" style="background:rgba(255,255,255,0.4);"></div>
+            <span class="font-raleway text-xs font-bold tracking-[0.38em] uppercase" style="color:rgba(255,255,255,0.55);">Physician-Led</span>
+          </div>
+          <h2 class="font-raleway text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
+            Your Referral Stays in Expert Hands
+          </h2>
+          <p class="text-lg leading-relaxed" style="color:rgba(255,255,255,0.52);">
+            Every plan is directed by a sports medicine physician (MD) — so conservative management is done properly, and surgical referral happens only when it's genuinely the right call.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- WHAT YOU GET BACK -->
   <section id="what-you-get" class="py-24" style="background-color:#F6F6F3; scroll-margin-top:100px;">

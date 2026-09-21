@@ -92,8 +92,13 @@
   </nav>
 
   <!-- PAGE HERO -->
-  <section class="dot-grid pt-36 pb-20" style="background-color:#3B4A2F;">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+  <section class="relative dot-grid pt-36 pb-20 overflow-hidden" style="background-color:#3B4A2F;">
+    <img src="images/clinic-lobby-brand.jpg"
+         alt="Ridgepoint waiting area in Spokane"
+         class="absolute inset-0 w-full h-full object-cover" style="object-position:center 50%;" />
+    <div class="absolute inset-0 pointer-events-none"
+         style="background: linear-gradient(100deg, rgba(30,40,24,0.95) 0%, rgba(30,40,24,0.85) 42%, rgba(30,40,24,0.62) 100%);"></div>
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
       <p class="font-raleway text-xs tracking-[0.5em] uppercase mb-6" style="color:rgba(255,255,255,0.28);">Ridgepoint Performance Medicine</p>
       <h1 class="font-raleway font-extrabold text-white leading-tight mb-6" style="font-size: clamp(2.2rem, 5vw, 4rem);">For Patients</h1>
       <p class="text-lg max-w-2xl leading-relaxed" style="color:rgba(255,255,255,0.5);">
@@ -341,6 +346,32 @@
       </div>
     </div>
   </section>
+
+  <!-- FOUNDING PRINCIPLE PHOTO SPLIT -->
+  <section class="bg-white">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="flex items-center order-2 lg:order-1" style="background-color:#3B4A2F;">
+        <div class="px-8 py-16 lg:px-16 lg:py-20 max-w-lg">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="h-px w-8" style="background:rgba(255,255,255,0.4);"></div>
+            <span class="font-raleway text-xs font-bold tracking-[0.38em] uppercase" style="color:rgba(255,255,255,0.55);">Our Promise to You</span>
+          </div>
+          <h2 class="font-raleway text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
+            Always Do What's Right for the Patient
+          </h2>
+          <p class="text-lg leading-relaxed" style="color:rgba(255,255,255,0.52);">
+            Not what's easiest. Not what's most profitable. Not what keeps the schedule moving. What is actually right for you — every time.
+          </p>
+        </div>
+      </div>
+      <div class="relative min-h-[360px] lg:min-h-[480px] order-1 lg:order-2" style="background-color:#F6F6F3;">
+        <img src="images/detail-founding-principle.jpg"
+             alt="Ridgepoint founding principle displayed in the clinic"
+             class="absolute inset-0 w-full h-full object-cover" style="object-position:center 30%;" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
 
   <!-- CONDITIONS WE TREAT -->
   <section id="conditions" class="py-24 bg-white" style="scroll-margin-top:100px;">
