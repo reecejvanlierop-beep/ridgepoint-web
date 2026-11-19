@@ -63,10 +63,10 @@ var FORMS = {
         ['patient_phone', 'Phone'],
         ['patient_email', 'Email'],
       ]],
-      ['ACCIDENT & INJURIES', [
-        ['accident_date', 'Date of Accident'],
+      ['INCIDENT & INJURIES', [
+        ['accident_date', 'Date of Incident'],
         ['injuries', 'Injuries / Symptoms'],
-        ['prior_treatment', 'Treatment Since Accident'],
+        ['prior_treatment', 'Treatment Since Incident'],
       ]],
       ['CLAIM & PAYMENT', [
         ['auto_insurance', 'Auto Insurance'],
