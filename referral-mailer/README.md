@@ -1,6 +1,8 @@
 # Referral mailer
 
-Emails each referral from the **For Providers** page straight to the nurses. Nothing is
+Emails each referral from the website straight to the nurses. One script handles both forms:
+the provider form (`for-providers.html`) and the MVA attorney form (`attorney-referral.html`,
+which sends `form_type=attorney`). Nothing is
 saved to Drive, Sheets or the website. It runs inside Ridgepoint's Google Workspace.
 
 ## Compliance notes
@@ -12,7 +14,7 @@ saved to Drive, Sheets or the website. It runs inside Ridgepoint's Google Worksp
 1. Sign in to a **@ridgepointmed.com** Google account (ideally a shared admin account, not someone's personal one) and go to <https://script.google.com> → **New project**. Name it "Ridgepoint Referral Mailer".
 2. Delete the starter code and paste in everything from `Code.gs`.
 3. `RECIPIENTS` is already set to `nursing@ridgepointmed.com` (add more, comma-separated, if needed).
-4. Choose `sendTestReferral` from the function menu → **Run** → approve the permissions. A test email ("New Referral – Test Patient") should arrive.
+4. Choose `sendTestReferral` (or `sendTestAttorneyReferral`) from the function menu → **Run** → approve the permissions. A test email ("New Referral – Test Patient") should arrive.
 5. **Deploy → New deployment** → type **Web app**:
    - Execute as: **Me**
    - Who has access: **Anyone** (providers aren't signed in; this only allows submitting the form)
@@ -22,3 +24,4 @@ saved to Drive, Sheets or the website. It runs inside Ridgepoint's Google Worksp
 ## Changing it later
 - New recipients: edit `RECIPIENTS`, then **Deploy → Manage deployments → Edit → Version: New version**. The URL stays the same.
 - Until `REFERRAL_ENDPOINT` is filled in, the form tells providers to call or fax instead.
+- After pasting an updated `Code.gs`, always deploy a **new version** of the existing deployment (not a new deployment), or the website will keep calling the old code.

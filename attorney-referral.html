@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MVA Attorney Referrals | Ridgepoint Performance Medicine</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Refer a client injured in a motor vehicle accident to Ridgepoint Performance Medicine in Spokane, WA. Simple online referral for attorneys and case managers." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png" />
+  <meta name="theme-color" content="#3B4A2F" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ridgepoint Performance Medicine" />
+  <meta property="og:title" content="MVA Attorney Referrals — Ridgepoint Performance Medicine" />
+  <meta property="og:description" content="Refer a client injured in a motor vehicle accident to Ridgepoint Performance Medicine in Spokane, WA. Simple online referral for attorneys and case managers." />
+  <meta property="og:url" content="https://ridgepoint-web.vercel.app/attorney-referral.html" />
+  <meta property="og:image" content="https://ridgepoint-web.vercel.app/images/og-lobby.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ridgepoint Performance Medicine reception and lobby in Spokane, WA" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MVA Attorney Referrals — Ridgepoint Performance Medicine" />
+  <meta name="twitter:description" content="Refer a client injured in a motor vehicle accident to Ridgepoint Performance Medicine in Spokane, WA. Simple online referral for attorneys and case managers." />
+  <meta name="twitter:image" content="https://ridgepoint-web.vercel.app/images/og-lobby.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { rp: { primary:'#3B4A2F', forest:'#3B4A2F', sage:'#C8A060', walnut:'#5C3A1E', hardware:'#B5935A', warm:'#F6F6F3', stone:'#E6E7E2', charcoal:'#222222' } },
+          fontFamily: { raleway:['Raleway','sans-serif'], inter:['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #F6F6F3; color: #222222; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3,h4 { font-family: 'Raleway', sans-serif; }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+    .dot-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 28px 28px; }
+    .nav-link { font-size: 0.8125rem; color: rgba(34,34,34,0.52); letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-link:hover { color: #3B4A2F; }
+
+
+    /* ── Referral form ── */
+    .rf-legend { font-family:'Raleway',sans-serif; font-weight:700; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#3B4A2F; padding-bottom:0.5rem; margin-bottom:0.25rem; border-bottom:1px solid #E6E7E2; width:100%; }
+    .rf-label { display:block; font-family:'Raleway',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(34,34,34,0.45); margin-bottom:0.5rem; }
+    .rf-input { width:100%; background:#fff; border:1px solid #E6E7E2; padding:0.75rem 1rem; font-size:0.875rem; transition:border-color .2s; }
+    .rf-input:focus { outline:none; border-color:#3B4A2F; }
+    .rf-choice { display:inline-flex; align-items:center; gap:0.5rem; background:#fff; border:1px solid #E6E7E2; padding:0.6rem 1rem; font-size:0.875rem; cursor:pointer; }
+    .rf-choice input { accent-color:#3B4A2F; }
+
+    /* ── Progressive-disclosure "reveal" (native details, no JS) ── */
+    .reveal > summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:0.55rem; font-family:'Raleway',sans-serif; font-weight:700; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#3B4A2F; transition:color .2s; }
+    .reveal > summary::-webkit-details-marker { display:none; }
+    .reveal > summary:hover { color:#2c3823; }
+    .reveal .rv-ico { display:inline-flex; align-items:center; justify-content:center; width:1.15rem; height:1.15rem; border:1px solid currentColor; font-weight:300; font-size:0.95rem; line-height:1; transition:transform .2s; }
+    .reveal[open] > summary .rv-ico { transform:rotate(45deg); }
+    .reveal[open] > summary .rv-more { display:none; }
+    .reveal .rv-less { display:none; }
+    .reveal[open] > summary .rv-less { display:inline; }
+    .reveal > .rv-body { margin-top:1.25rem; }
+    .reveal-dark > summary { color:rgba(255,255,255,0.7); }
+    .reveal-dark > summary:hover { color:#fff; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b"
+       style="background: rgba(246,246,243,0.97); backdrop-filter: blur(8px); border-color: #E6E7E2;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex-shrink-0 select-none">
+        <img src="Ridgepoint_LogoFILES/Ridgepoint_GREEN/Ridgepoint_logoGREEN.png" alt="Ridgepoint Performance Medicine" style="height:60px; width:auto; display:block; object-fit:contain;" />
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="services.html"       class="nav-link">Services</a>
+        <a href="why-ridgepoint.html" class="nav-link">Why Ridgepoint</a>
+        <a href="for-providers.html"  class="nav-link">For Providers</a>
+        <a href="for-patients.html"   class="nav-link">For Patients</a>
+        <a href="team.html"           class="nav-link">Our Team</a>
+        <a href="index.html#contact" class="bg-rp-primary text-white text-xs font-bold font-raleway tracking-[0.18em] uppercase px-6 py-2.5 hover:bg-rp-forest transition-colors duration-200">Request Appointment</a>
+      </div>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden p-2 text-rp-charcoal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex-col border-t" style="background:#F6F6F3; border-color:#E6E7E2;">
+      <a href="services.html"       class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Services</a>
+      <a href="why-ridgepoint.html" class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Why Ridgepoint</a>
+      <a href="for-providers.html"  class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">For Providers</a>
+      <a href="for-patients.html"   class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">For Patients</a>
+      <a href="team.html"           class="px-6 py-3.5 text-sm text-rp-charcoal border-b border-rp-stone">Our Team</a>
+      <div class="px-6 py-4"><a href="index.html#contact" class="block bg-rp-primary text-white text-xs font-bold font-raleway tracking-[0.18em] uppercase px-6 py-3 text-center">Request Appointment</a></div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="relative dot-grid pt-36 pb-16 overflow-hidden" style="background-color:#3B4A2F;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+      <p class="font-raleway text-xs tracking-[0.5em] uppercase mb-6" style="color:rgba(255,255,255,0.28);">Ridgepoint Performance Medicine</p>
+      <h1 class="font-raleway font-extrabold text-white leading-tight mb-6" style="font-size: clamp(2.2rem, 5vw, 4rem);">MVA Attorney Referrals</h1>
+      <p class="text-lg max-w-2xl leading-relaxed" style="color:rgba(255,255,255,0.55);">
+        Refer a client injured in a motor vehicle accident. We'll contact your client to schedule and confirm with your office once their first visit is booked.
+      </p>
+    </div>
+  </section>
+
+  <section id="attorney-referral" class="py-20 bg-white" style="scroll-margin-top:100px;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+
+        <!-- Left: how it works + billing notes -->
+        <div class="lg:col-span-2 space-y-10">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="h-px w-8 bg-rp-primary"></div>
+              <span class="font-raleway text-rp-primary text-xs font-bold tracking-[0.38em] uppercase">How It Works</span>
+            </div>
+            <ol class="space-y-4 text-sm leading-relaxed" style="color:rgba(34,34,34,0.65);">
+              <li><strong class="text-rp-charcoal">1. Send the referral.</strong> Fill out the form with your client's contact and claim details.</li>
+              <li><strong class="text-rp-charcoal">2. We call your client.</strong> Our team reaches out to schedule the initial evaluation.</li>
+              <li><strong class="text-rp-charcoal">3. We confirm with you.</strong> Your office hears from us once the visit is booked, and we coordinate records and updates.</li>
+            </ol>
+          </div>
+
+          <div class="bg-rp-warm border border-rp-stone p-6 space-y-4">
+            <div class="font-raleway text-[10px] font-bold tracking-[0.3em] uppercase text-rp-primary">Billing</div>
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.7);">
+              We bill the patient's <strong>own PIP</strong> coverage. We can't bill third-party auto insurance.
+            </p>
+            <p class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.7);">
+              If PIP is exhausted, we can bill health insurance only for plans we're contracted with: <strong>Aetna, Regence, Premera, Cigna and First Choice</strong>. Otherwise the account is held on lien / LOP.
+            </p>
+          </div>
+
+          <div class="text-sm leading-relaxed" style="color:rgba(34,34,34,0.6);">
+            Questions? Contact our Office Manager, Erin Crawford, at
+            <a href="mailto:erin@ridgepointmed.com" class="text-rp-primary underline">erin@ridgepointmed.com</a>
+            or <span class="whitespace-nowrap">(509) 570-6152</span>.
+            Fax records to <span class="whitespace-nowrap">(509) 472-0490</span>.
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="lg:col-span-3 bg-rp-warm border border-rp-stone p-6 sm:p-8">
+          <h2 class="font-raleway font-bold text-rp-charcoal text-lg mb-2">Send an MVA Referral</h2>
+          <p class="text-xs leading-relaxed mb-6" style="color:rgba(34,34,34,0.5);">Fields marked * are required. If you don't have a detail yet, leave it blank and we'll follow up.</p>
+          <form id="referral-form" class="space-y-8" novalidate>
+            <input type="hidden" name="form_type" value="attorney" />
+            <div aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
+              <label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+            </div>
+
+            <fieldset class="space-y-4">
+              <legend class="rf-legend">Law Firm</legend>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="rf-firm" class="rf-label">Law Firm *</label>
+                  <input id="rf-firm" type="text" name="law_firm" required autocomplete="organization" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-contact" class="rf-label">Attorney / Case Contact *</label>
+                  <input id="rf-contact" type="text" name="case_contact" required autocomplete="name" class="rf-input" />
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label for="rf-firm-phone" class="rf-label">Phone *</label>
+                  <input id="rf-firm-phone" type="tel" name="firm_phone" required autocomplete="tel" placeholder="(509) 000-0000" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-firm-fax" class="rf-label">Fax</label>
+                  <input id="rf-firm-fax" type="tel" name="firm_fax" placeholder="(509) 000-0000" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-firm-email" class="rf-label">Email *</label>
+                  <input id="rf-firm-email" type="email" name="firm_email" required autocomplete="email" class="rf-input" />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="space-y-4">
+              <legend class="rf-legend">Patient</legend>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label for="rf-pt-first" class="rf-label">First Name *</label>
+                  <input id="rf-pt-first" type="text" name="patient_first_name" required autocomplete="off" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-pt-last" class="rf-label">Last Name *</label>
+                  <input id="rf-pt-last" type="text" name="patient_last_name" required autocomplete="off" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-pt-dob" class="rf-label">Date of Birth *</label>
+                  <input id="rf-pt-dob" type="date" name="patient_dob" required autocomplete="off" class="rf-input" />
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="rf-pt-phone" class="rf-label">Phone *</label>
+                  <input id="rf-pt-phone" type="tel" name="patient_phone" required autocomplete="off" placeholder="(509) 000-0000" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-pt-email" class="rf-label">Email</label>
+                  <input id="rf-pt-email" type="email" name="patient_email" autocomplete="off" class="rf-input" />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="space-y-4">
+              <legend class="rf-legend">Accident &amp; Injuries</legend>
+              <div>
+                <label for="rf-doi" class="rf-label">Date of Accident *</label>
+                <input id="rf-doi" type="date" name="accident_date" required class="rf-input sm:max-w-xs" />
+              </div>
+              <div>
+                <label for="rf-injuries" class="rf-label">Injuries / Current Symptoms *</label>
+                <textarea id="rf-injuries" name="injuries" rows="3" required placeholder="e.g. Neck and low back pain, headaches since the accident" class="rf-input resize-y"></textarea>
+              </div>
+              <div>
+                <label for="rf-prior" class="rf-label">Treatment Since Accident</label>
+                <textarea id="rf-prior" name="prior_treatment" rows="2" placeholder="ER / urgent care, other providers, imaging (X-ray, MRI) with dates" class="rf-input resize-y"></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="space-y-4">
+              <legend class="rf-legend">Claim &amp; Payment</legend>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="rf-auto-ins" class="rf-label">Patient's Auto Insurance *</label>
+                  <input id="rf-auto-ins" type="text" name="auto_insurance" required placeholder="e.g. State Farm" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-claim" class="rf-label">PIP Claim #</label>
+                  <input id="rf-claim" type="text" name="pip_claim_number" class="rf-input" />
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="rf-adj" class="rf-label">PIP Adjuster Name</label>
+                  <input id="rf-adj" type="text" name="adjuster_name" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-adj-contact" class="rf-label">Adjuster Phone / Email</label>
+                  <input id="rf-adj-contact" type="text" name="adjuster_contact" class="rf-input" />
+                </div>
+              </div>
+              <div>
+                <span class="rf-label">PIP Coverage *</span>
+                <div class="flex flex-wrap gap-3">
+                  <label class="rf-choice"><input type="radio" name="pip_status" value="Available" required /> Available</label>
+                  <label class="rf-choice"><input type="radio" name="pip_status" value="Exhausted" /> Exhausted</label>
+                  <label class="rf-choice"><input type="radio" name="pip_status" value="No PIP" /> No PIP</label>
+                  <label class="rf-choice"><input type="radio" name="pip_status" value="Unknown" /> Unknown</label>
+                </div>
+              </div>
+              <div>
+                <span class="rf-label">Patient Has Health Insurance? *</span>
+                <div class="flex flex-wrap gap-3">
+                  <label class="rf-choice"><input type="radio" name="has_health_insurance" value="Yes" required /> Yes</label>
+                  <label class="rf-choice"><input type="radio" name="has_health_insurance" value="No" /> No</label>
+                  <label class="rf-choice"><input type="radio" name="has_health_insurance" value="Unknown" /> Unknown</label>
+                </div>
+              </div>
+              <div data-show-when="has_health_insurance=Yes" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="rf-health-ins" class="rf-label">Health Insurance Company</label>
+                  <input id="rf-health-ins" type="text" name="health_insurance" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-member" class="rf-label">Member ID #</label>
+                  <input id="rf-member" type="text" name="member_id" class="rf-input" />
+                </div>
+              </div>
+              <div>
+                <span class="rf-label">Bill Services To *</span>
+                <div class="flex flex-wrap gap-3">
+                  <label class="rf-choice"><input type="radio" name="bill_to" value="PIP" required /> PIP</label>
+                  <label class="rf-choice"><input type="radio" name="bill_to" value="Health insurance" /> Health insurance</label>
+                  <label class="rf-choice"><input type="radio" name="bill_to" value="Lien / LOP" /> Lien / LOP</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="bg-white border border-rp-stone px-4 py-3">
+              <p class="text-xs leading-relaxed" style="color:rgba(34,34,34,0.6);">
+                Please fax records, LOPs or other documents to <strong class="whitespace-nowrap">(509) 472-0490</strong>. This form can't accept attachments.
+              </p>
+            </div>
+            <button id="referral-submit" type="submit" class="w-full bg-rp-primary text-white font-raleway font-bold text-xs tracking-[0.22em] uppercase px-8 py-4 hover:bg-rp-forest transition-colors duration-200 disabled:opacity-60 disabled:cursor-wait">
+              Submit Referral
+            </button>
+            <p id="referral-status" class="text-sm text-center hidden" role="status" aria-live="polite" style="color:rgba(34,34,34,0.7);"></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color:#222222;" class="py-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex flex-col md:flex-row items-start justify-between gap-10 mb-10">
+        <div>
+          <a href="index.html" class="block mb-5"><img src="Ridgepoint_LogoFILES/Ridgepoint_WHITE/Ridgepoint_logoWHITE.png" alt="Ridgepoint Performance Medicine" style="height:48px; width:auto; display:block; object-fit:contain;" /></a>
+          <div class="text-xs leading-relaxed" style="color:#555;">534 E Spokane Falls Blvd<br/>Spokane, WA 99202</div>
+          <div class="text-xs mt-1" style="color:#555;">info@ridgepointmed.com</div>
+        </div>
+        <div class="flex gap-14">
+          <div>
+            <div class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase mb-4" style="color:#444;">Clinic</div>
+            <div class="flex flex-col gap-2.5">
+              <a href="services.html"       class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Services</a>
+              <a href="why-ridgepoint.html" class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Why Ridgepoint</a>
+              <a href="team.html"           class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Our Team</a>
+            </div>
+          </div>
+          <div>
+            <div class="font-raleway text-[10px] font-bold tracking-[0.35em] uppercase mb-4" style="color:#444;">Resources</div>
+            <div class="flex flex-col gap-2.5">
+              <a href="for-providers.html" class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">For Providers</a>
+              <a href="for-patients.html"  class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">For Patients</a>
+              <a href="index.html#contact" class="text-xs tracking-wide transition-colors duration-200" style="color:#555;" onmouseover="this.style.color='#F6F6F3'" onmouseout="this.style.color='#555'">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t" style="border-color:#2a2a2a;">
+        <div class="text-xs" style="color:#3a3a3a;">© 2026 Ridgepoint Performance Medicine. Spokane, WA.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // MVA attorney referral → same Google Apps Script mailer as the provider form
+    // (referral-mailer/Code.gs), which emails nursing@ridgepointmed.com.
+    var REFERRAL_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxKWo3qfPszfy2V6wMfNObCzCJ0f7l6DSbpicNtF4lJywnIKcvXDC63xychHfmFgalejw/exec';
+
+    (function () {
+      var form = document.getElementById('referral-form');
+      if (!form) return;
+      var status = document.getElementById('referral-status');
+      var button = document.getElementById('referral-submit');
+      var FALLBACK = 'Please call (509) 570-6152 or fax the referral to (509) 472-0490.';
+
+      // Show follow-up fields only when their trigger answer is picked
+      var toggles = form.querySelectorAll('[data-show-when]');
+      function syncToggles() {
+        toggles.forEach(function (el) {
+          var rule = el.getAttribute('data-show-when').split('=');
+          el.classList.toggle('hidden', form.elements[rule[0]].value !== rule[1]);
+        });
+      }
+      form.addEventListener('change', syncToggles);
+
+      function show(msg, ok) {
+        status.classList.remove('hidden');
+        status.textContent = msg;
+        status.style.color = ok === false ? '#9B2C2C' : 'rgba(34,34,34,0.7)';
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        button.disabled = true;
+        show('Sending…');
+        fetch(REFERRAL_ENDPOINT, { method: 'POST', body: new FormData(form) })
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (data && data.ok) {
+              form.reset();
+              syncToggles();
+              show('Thank you — your referral has been received. We’ll contact your client to schedule and confirm with your office.');
+            } else {
+              show('Something went wrong sending the referral. ' + FALLBACK, false);
+            }
+          })
+          .catch(function () { show('Something went wrong sending the referral. ' + FALLBACK, false); })
+          .then(function () { button.disabled = false; });
+      });
+    })();
+  </script>
+
+</body>
+</html>
