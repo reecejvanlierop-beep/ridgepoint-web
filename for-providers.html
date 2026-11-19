@@ -53,6 +53,15 @@
     .nav-link { font-size: 0.8125rem; color: rgba(34,34,34,0.52); letter-spacing: 0.04em; transition: color 0.2s; }
     .nav-link:hover { color: #3B4A2F; }
 
+
+    /* ── Referral form ── */
+    .rf-legend { font-family:'Raleway',sans-serif; font-weight:700; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#3B4A2F; padding-bottom:0.5rem; margin-bottom:0.25rem; border-bottom:1px solid #E6E7E2; width:100%; }
+    .rf-label { display:block; font-family:'Raleway',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(34,34,34,0.45); margin-bottom:0.5rem; }
+    .rf-input { width:100%; background:#fff; border:1px solid #E6E7E2; padding:0.75rem 1rem; font-size:0.875rem; transition:border-color .2s; }
+    .rf-input:focus { outline:none; border-color:#3B4A2F; }
+    .rf-choice { display:inline-flex; align-items:center; gap:0.5rem; background:#fff; border:1px solid #E6E7E2; padding:0.6rem 1rem; font-size:0.875rem; cursor:pointer; }
+    .rf-choice input { accent-color:#3B4A2F; }
+
     /* ── Progressive-disclosure "reveal" (native details, no JS) ── */
     .reveal > summary { cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:0.55rem; font-family:'Raleway',sans-serif; font-weight:700; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:#3B4A2F; transition:color .2s; }
     .reveal > summary::-webkit-details-marker { display:none; }
@@ -377,49 +386,116 @@
 
         <!-- Referral Form -->
         <div class="bg-rp-warm border border-rp-stone p-8">
-          <h3 class="font-raleway font-bold text-rp-charcoal text-lg mb-6">Send a Referral</h3>
-          <form id="referral-form" class="space-y-4"
-                action="https://formspree.io/f/mgawgayk" method="POST">
-            <input type="hidden" name="_subject" value="New Provider Referral — ridgepointmed.com" />
-            <div>
-              <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Your Name &amp; Practice</label>
-              <input type="text" name="provider_name_practice" required placeholder="Dr. Jane Smith — Spokane Family Medicine"
-                     class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" />
+          <h3 class="font-raleway font-bold text-rp-charcoal text-lg mb-2">Send a Referral</h3>
+          <p class="text-xs leading-relaxed mb-6" style="color:rgba(34,34,34,0.5);">Fields marked * are required. Our team will contact the patient to schedule.</p>
+          <form id="referral-form" class="space-y-8" novalidate>
+            <!-- Honeypot: hidden from people, catches spam bots -->
+            <div aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
+              <label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
             </div>
-            <div>
-              <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Your Email</label>
-              <input type="email" name="provider_email" required placeholder="your@practice.com"
-                     class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" />
-            </div>
-            <div>
-              <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Your Phone</label>
-              <input type="tel" name="provider_phone" placeholder="(509) 000-0000"
-                     class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" />
-            </div>
-            <div>
-              <label class="block font-raleway text-[10px] font-bold tracking-widest uppercase mb-2" style="color:rgba(34,34,34,0.45);">Reason for Referral</label>
-              <select name="reason" class="w-full bg-white border border-rp-stone px-4 py-3 text-sm focus:outline-none focus:border-rp-primary transition-colors" style="color:rgba(34,34,34,0.65);">
-                <option value="">Select...</option>
-                <option>MSK Pain / Injury Evaluation</option>
-                <option>Musculoskeletal Evaluation</option>
-                <option>Rehabilitation</option>
-                <option>Post-Surgical Rehab</option>
-                <option>Second Opinion</option>
-                <option>Chronic MSK Condition</option>
-                <option>Return-to-Sport Clearance</option>
-                <option>Other</option>
-              </select>
-            </div>
+
+            <!-- Referring provider -->
+            <fieldset class="space-y-4">
+              <legend class="rf-legend">Referring Provider</legend>
+              <div>
+                <label for="rf-provider" class="rf-label">Name &amp; Practice *</label>
+                <input id="rf-provider" type="text" name="provider_name_practice" required autocomplete="name" placeholder="Dr. Jane Smith — Spokane Family Medicine" class="rf-input" />
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="rf-provider-phone" class="rf-label">Phone *</label>
+                  <input id="rf-provider-phone" type="tel" name="provider_phone" required autocomplete="tel" placeholder="(509) 000-0000" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-provider-fax" class="rf-label">Fax</label>
+                  <input id="rf-provider-fax" type="tel" name="provider_fax" placeholder="(509) 000-0000" class="rf-input" />
+                </div>
+              </div>
+              <div>
+                <label for="rf-provider-email" class="rf-label">Email *</label>
+                <input id="rf-provider-email" type="email" name="provider_email" required autocomplete="email" placeholder="your@practice.com" class="rf-input" />
+              </div>
+            </fieldset>
+
+            <!-- Patient -->
+            <fieldset class="space-y-4">
+              <legend class="rf-legend">Patient</legend>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="rf-pt-first" class="rf-label">First Name *</label>
+                  <input id="rf-pt-first" type="text" name="patient_first_name" required autocomplete="off" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-pt-last" class="rf-label">Last Name *</label>
+                  <input id="rf-pt-last" type="text" name="patient_last_name" required autocomplete="off" class="rf-input" />
+                </div>
+              </div>
+              <div>
+                <label for="rf-pt-dob" class="rf-label">Date of Birth *</label>
+                <input id="rf-pt-dob" type="date" name="patient_dob" required autocomplete="off" class="rf-input" />
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="rf-pt-phone" class="rf-label">Phone *</label>
+                  <input id="rf-pt-phone" type="tel" name="patient_phone" required autocomplete="off" placeholder="(509) 000-0000" class="rf-input" />
+                </div>
+                <div>
+                  <label for="rf-pt-email" class="rf-label">Email</label>
+                  <input id="rf-pt-email" type="email" name="patient_email" autocomplete="off" placeholder="patient@email.com" class="rf-input" />
+                </div>
+              </div>
+              <div>
+                <span class="rf-label">Payment *</span>
+                <div class="flex flex-wrap gap-3">
+                  <label class="rf-choice"><input type="radio" name="payment" value="Insurance" required /> Insurance</label>
+                  <label class="rf-choice"><input type="radio" name="payment" value="Cash / Self-pay" /> Cash / Self-pay</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Clinical -->
+            <fieldset class="space-y-4">
+              <legend class="rf-legend">Referral Details</legend>
+              <div>
+                <label for="rf-category" class="rf-label">Referral Type</label>
+                <select id="rf-category" name="referral_type" class="rf-input" style="color:rgba(34,34,34,0.75);">
+                  <option value="">Select...</option>
+                  <option>MSK Pain / Injury Evaluation</option>
+                  <option>Rehabilitation</option>
+                  <option>Post-Surgical Rehab</option>
+                  <option>Second Opinion</option>
+                  <option>Chronic MSK Condition</option>
+                  <option>Return-to-Sport Clearance</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="rf-reason" class="rf-label">Reason for Referral *</label>
+                <textarea id="rf-reason" name="reason" rows="3" required placeholder="e.g. Right knee pain x 3 months, suspected meniscus tear. Failed 6 weeks of PT." class="rf-input resize-y"></textarea>
+              </div>
+              <div>
+                <span class="rf-label">Prior Imaging? *</span>
+                <div class="flex flex-wrap gap-3">
+                  <label class="rf-choice"><input type="radio" name="prior_imaging" value="Yes" required /> Yes</label>
+                  <label class="rf-choice"><input type="radio" name="prior_imaging" value="No" /> No</label>
+                  <label class="rf-choice"><input type="radio" name="prior_imaging" value="Unsure" /> Unsure</label>
+                </div>
+              </div>
+              <div id="rf-imaging-details-wrap" class="hidden">
+                <label for="rf-imaging-details" class="rf-label">Imaging Details</label>
+                <textarea id="rf-imaging-details" name="imaging_details" rows="2" placeholder="Type, date, and facility — e.g. MRI right knee, 10/15/2026, Inland Imaging" class="rf-input resize-y"></textarea>
+              </div>
+            </fieldset>
+
             <div class="bg-white border border-rp-stone px-4 py-3">
               <p class="text-xs leading-relaxed" style="color:rgba(34,34,34,0.6);">
-                Please do <strong>not</strong> include patient details here. Submit your contact info and our team
-                will reach out to securely collect patient information and clinical notes.
+                Please fax chart notes or imaging reports to <strong class="whitespace-nowrap">(509) 472-0490</strong>. This form is for referral details only and can't accept attachments.
               </p>
             </div>
-            <button type="submit" class="w-full bg-rp-primary text-white font-raleway font-bold text-xs tracking-[0.22em] uppercase px-8 py-4 hover:bg-rp-forest transition-colors duration-200">
+            <button id="referral-submit" type="submit" class="w-full bg-rp-primary text-white font-raleway font-bold text-xs tracking-[0.22em] uppercase px-8 py-4 hover:bg-rp-forest transition-colors duration-200 disabled:opacity-60 disabled:cursor-wait">
               Submit Referral
             </button>
-            <p id="referral-status" class="text-sm text-center mt-2 hidden" style="color:rgba(34,34,34,0.7);"></p>
+            <p id="referral-status" class="text-sm text-center hidden" role="status" aria-live="polite" style="color:rgba(34,34,34,0.7);"></p>
           </form>
         </div>
 
@@ -471,30 +547,58 @@
   </footer>
 
   <script>
-    // Submits the referral form to Formspree (routes to info@ridgepointmed.com)
-    // without leaving the page, and shows an inline thank-you message.
+    // Referral form → Google Apps Script mailer (referral-mailer/Code.gs).
+    // The script emails each referral to the clinical team inside Ridgepoint's
+    // Google Workspace. Nothing is stored on this website.
+    // Paste the Apps Script web-app URL here after deploying (see referral-mailer/README.md).
+    var REFERRAL_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxKWo3qfPszfy2V6wMfNObCzCJ0f7l6DSbpicNtF4lJywnIKcvXDC63xychHfmFgalejw/exec';
+
     (function () {
       var form = document.getElementById('referral-form');
       if (!form) return;
       var status = document.getElementById('referral-status');
+      var button = document.getElementById('referral-submit');
+      var imagingWrap = document.getElementById('rf-imaging-details-wrap');
+      var FALLBACK = 'Please call (509)\u00a0570-6152 or fax the referral to (509)\u00a0472-0490.';
+
+      // Show imaging details only when "Yes" is selected
+      form.querySelectorAll('input[name="prior_imaging"]').forEach(function (r) {
+        r.addEventListener('change', function () {
+          imagingWrap.classList.toggle('hidden', form.prior_imaging.value !== 'Yes');
+        });
+      });
+
+      function show(msg, ok) {
+        status.classList.remove('hidden');
+        status.textContent = msg;
+        status.style.color = ok === false ? '#9B2C2C' : 'rgba(34,34,34,0.7)';
+      }
+
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        status.classList.remove('hidden');
-        status.textContent = 'Sending…';
-        fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        }).then(function (res) {
-          if (res.ok) {
-            form.reset();
-            status.textContent = 'Thank you — your referral has been sent. Our team will reach out shortly.';
-          } else {
-            status.textContent = 'Something went wrong. Please email info@ridgepointmed.com directly.';
-          }
-        }).catch(function () {
-          status.textContent = 'Something went wrong. Please email info@ridgepointmed.com directly.';
-        });
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        if (!REFERRAL_ENDPOINT) {
+          show('Online referrals are not active yet. ' + FALLBACK, false);
+          return;
+        }
+        button.disabled = true;
+        show('Sending…');
+        fetch(REFERRAL_ENDPOINT, { method: 'POST', body: new FormData(form) })
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (data && data.ok) {
+              form.reset();
+              imagingWrap.classList.add('hidden');
+              show('Thank you — your referral has been received. Our team will contact the patient to schedule.');
+            } else {
+              show('Something went wrong sending the referral. ' + FALLBACK, false);
+            }
+          })
+          .catch(function () { show('Something went wrong sending the referral. ' + FALLBACK, false); })
+          .then(function () { button.disabled = false; });
       });
     })();
   </script>
